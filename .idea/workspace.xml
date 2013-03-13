@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9625f072-90d0-4914-ae9f-5c36bd22158b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/connectz.css" afterPath="$PROJECT_DIR$/www/css/connectz.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/index.css" afterPath="$PROJECT_DIR$/www/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/images/ajax-loader.png" afterPath="$PROJECT_DIR$/www/css/images/ajax-loader.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
     </list>
@@ -28,7 +28,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="78" selection-start="2937" selection-end="2937" vertical-scroll-proportion="-9.9">
+            <state line="94" column="77" selection-start="2936" selection-end="2936" vertical-scroll-proportion="-31.25">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="142" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.591195">
+            <state line="83" column="26" selection-start="3947" selection-end="3947" vertical-scroll-proportion="1.3050314">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -315,14 +315,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="78" selection-start="2937" selection-end="2937" vertical-scroll-proportion="-9.9">
+        <state line="94" column="77" selection-start="2936" selection-end="2936" vertical-scroll-proportion="-31.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="142" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.591195">
+        <state line="83" column="26" selection-start="3947" selection-end="3947" vertical-scroll-proportion="1.3050314">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

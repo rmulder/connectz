@@ -60,27 +60,28 @@ var app = {
                 function(contacts) {
                     console.log(contacts);
                     //alert('contacts.length:' + contacts.length);
-                    var tmp = '', fi, li;
-                    for (var i = 0; i < contacts.length; i++) {
-                        tmp += '<tr>';
-                        fi = (contacts[i].name.givenName) ? contacts[i].name.givenName.substring(0,1) : '';
-                        li = (contacts[i].name.familyName) ? contacts[i].name.familyName.substring(0,1) : '';
-                        tmp += '<td><input type="checkbox" name="meetz" value=""/></td>';
-                        tmp += '<td>' + fi + li + '</td>';
-                        tmp += '<td>' + contacts[i].name.givenName + ' ' + contacts[i].name.familyName + '</td>';
+                    var tmp = '', fi, li, i, j;
+                    for (i = 0; i < contacts.length; i++) {
                         if (contacts[i].phoneNumbers) {
-                          for (var j = 0; j < contacts[i].phoneNumbers.length; j++) {
+                          for (j = 0; j < contacts[i].phoneNumbers.length; j++) {
                             var phone = contacts[i].phoneNumbers[j];
                             console.log('phoneNumber:');
                             console.log(phone);
                             if (phone.type === 'mobile' || phone.type === 'other') {
+                              tmp += '<tr>';
+                              fi = (contacts[i].name.givenName) ? contacts[i].name.givenName.substring(0,1) : '';
+                              li = (contacts[i].name.familyName) ? contacts[i].name.familyName.substring(0,1) : '';
+                              tmp += '<td><input type="checkbox" name="meetz" value="' + phone.value + '"/></td>';
+                              tmp += '<td>' + fi + li + '</td>';
+                              tmp += '<td>' + contacts[i].name.givenName + ' ' + contacts[i].name.familyName + '</td>';
                               tmp += '<td><a href="tel:' + phone.value + '">Call</a> <a href="sms:' + phone.value + '?body=Meetz: "> Text' + '</a></td>';
+                              tmp += '</tr>';
+                              //break; // just take the first one we find
                             }
                           }
                         }
-                        tmp += '</tr>';
-                        console.log('emails:');
-                        console.log(contacts[i].emails);
+                        //console.log('emails:');
+                        //console.log(contacts[i].emails);
                         console.log('phone numbers:');
                         console.log(contacts[i].phoneNumbers);
                     }
