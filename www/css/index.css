@@ -163,3 +163,11 @@ html {height: 100%}
 body {height: 100%; margin:0; padding:0}
 #map_canvas {height: 100%}
 
+/* RMM - experimental - remove if not needed */
+a .ui-grid-b .ui-block-a, .ui-grid-b .ui-block-b, .ui-grid-b .ui-block-c, .ui-grid-b .ui-block-d {
+  white-space:pre-line;
+}
+
+.ui-grid-b .ui-block-a, .ui-grid-b .ui-block-b, .ui-grid-b .ui-block-c, .ui-grid-b .ui-block-d {
+  white-space:pre-line;
+}

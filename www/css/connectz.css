@@ -868,4 +868,7 @@ a.ui-link-inherit {
 	outline-width: 1px;
 	outline-style: auto;
 }
-			
+
+.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
+  padding: .5em 10px;
+}

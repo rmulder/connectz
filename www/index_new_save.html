@@ -9,22 +9,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <title>meetz</title>
-  <!-- jQuery Mobile CSS bits -->
-  <link rel="stylesheet"  href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-
-  <!-- <link href="css/jquery.mobile-1.3.0-rc.1.min.css" rel="stylesheet" />  -->
-  <!-- if you have a custom theme, add it here -->
-  <!-- <link rel="stylesheet"  href="jqm-icon-pack-2.0-original.css" />  -->
-
+  <link href="css/jquery.mobile-1.3.0-rc.1.min.css" rel="stylesheet" />
   <link href="css/jqm-icon-pack-2.0-original.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/my.css" />
-
-  <!-- Javascript includes -->
-  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-
-  <!-- <script src="js/jquery-1.9.0.min.js"></script>
-  <script src="js/jquery.mobile-1.3.0-rc.1.min.js"></script>  -->
+  <script src="js/jquery-1.9.0.min.js"></script>
+  <script src="js/jquery.mobile-1.3.0-rc.1.min.js"></script>
   <script src="js/my.js"></script>
 
   <!-- User-generated css -->
@@ -45,6 +34,8 @@
 <!-- home -->
 <div data-role="page" id="home">
   <div data-theme="b" data-role="header" data-position="fixed">
+          <span class="ui-title">
+          </span>
     <div data-role="navbar" data-iconpos="top">
       <ul>
         <li>
@@ -70,39 +61,26 @@
       </ul>
     </div>
     <div data-role="fieldcontain">
-      <input name="" id="searchinput1" placeholder="Search" value="" type="search">
+      <fieldset data-role="controlgroup">
+        <label for="searchinput4">
+        </label>
+        <input name="" id="searchinput4" placeholder="Search" value="" type="search">
+      </fieldset>
     </div>
   </div>
   <div data-role="content">
-    <div id="contacts-list">
-
-    </div>
-    <ul data-role="listview" data-inset="true" data-theme="b" id="contacts-body">
-
+    <ul data-role="listview" data-inset="true" data-theme="b">
       <li>
-        <div class="ui-grid-b">
-          <div class="ui-block-a" style="width:20%">Status</div>
-          <div class="ui-block-b" style="width:48%">Name</div>
-          <div class="ui-block-c" style="width:32%">Number</div>
-        </div>
-      </li>
-      <li>
-        <label> <input type="checkbox" name="meetz-1 "/>
-          <div class="ui-grid-b">
-            <div class="ui-block-a" style="width:20%">PT</div>
-            <div class="ui-block-b" style="width:47%">Phil Thoren</div>
-            <div class="ui-block-c" style="width:33%"><a href="tel:4085551212">C</a> <a href="sms:4085551212?body=Meetz: "> T</a></div>
-          </div>
-        </label>
-      </li>
-      <li>
-        <label> <input type="checkbox" name="meetz-1 "/>
-          <div class="ui-grid-b">
-            <div class="ui-block-a" style="width:20%">PT</div>
-            <div class="ui-block-b" style="width:47%">Phil Thoren</div>
-            <div class="ui-block-c" style="width:33%"><a href="tel:4085551212">C</a> <a href="sms:4085551212?body=Meetz: "> T</a></div>
-          </div>
-        </label>
+        <table data-inset="true" data-role="contacts-table" id="my-table" data-mode="reflow" class="ui-body-d ui-shadow table-stripe ui-responsive" >
+          <thead>
+            <th></th>
+            <th>Status</th>
+            <th>Name</th>
+            <th>Message Number</th>
+          </thead>
+          <tbody id="contacts-body">
+          </tbody>
+        </table>
       </li>
     </ul>
   </div>
@@ -129,6 +107,8 @@
 <!-- meetz -->
 <div data-role="page" id="meetz">
   <div data-theme="b" data-role="header" data-position="fixed">
+          <span class="ui-title">
+          </span>
     <div data-role="navbar" data-iconpos="top">
       <ul>
         <li>
@@ -154,7 +134,11 @@
       </ul>
     </div>
     <div data-role="fieldcontain">
-      <input name="" id="searchinput2" placeholder="Search" value="" type="search">
+      <fieldset data-role="controlgroup">
+        <label for="searchinput5">
+        </label>
+        <input name="" id="searchinput5" placeholder="Search" value="" type="search">
+      </fieldset>
     </div>
   </div>
   <div data-role="content">
@@ -182,6 +166,8 @@
 <!-- mapz -->
 <div data-role="page" id="mapz">
   <div data-theme="b" data-role="header" data-position="fixed">
+          <span class="ui-title">
+          </span>
     <div data-role="navbar" data-iconpos="top">
       <ul>
         <li>

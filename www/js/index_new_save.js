@@ -68,36 +68,24 @@ var app = {
                             console.log('phoneNumber:');
                             console.log(phone);
                             if (phone.type === 'mobile' || phone.type === 'other') {
-                              tmp = '';
+                              tmp += '<tr>';
                               fi = (contacts[i].name.givenName) ? contacts[i].name.givenName.substring(0,1) : '';
                               li = (contacts[i].name.familyName) ? contacts[i].name.familyName.substring(0,1) : '';
-
-                              //tmp += '<li>';
-                              tmp += '  <label> <input type="checkbox" name="meetz-1 "/>';
-                              tmp += '    <div class="ui-grid-b">';
-                              tmp += '      <div class="ui-block-a" style="width:20%"> ' + fi + li + '</div>';
-                              tmp += '      <div class="ui-block-b" style="width:47%">' + contacts[i].name.givenName + ' ' + contacts[i].name.familyName + '</div>';
-                              tmp += '      <div class="ui-block-c" style="width:33%"><a href="tel:' + phone.value + '">C</a> <a href="sms:' + phone.value + '?body=Meetz: "> T</a></div>';
-                              tmp += '    </div>';
-                              tmp += '  </label>';
-                              //tmp += '</li>';
-                              console.log(tmp);
-                              //$('#contacts-body').html(tmp);
-                              var $list = $("ul#contacts-body");
-                              $list.find(".last-child").removeClass("last-child");
-                              var $li = $("<li>", {"class": "last-child"}).html(tmp);
-                              $list.append($li);
+                              tmp += '<td><input type="checkbox" name="meetz" value="' + phone.value + '"/></td>';
+                              tmp += '<td>' + fi + li + '</td>';
+                              tmp += '<td>' + contacts[i].name.givenName + ' ' + contacts[i].name.familyName + '</td>';
+                              tmp += '<td><a href="tel:' + phone.value + '">Call</a> <a href="sms:' + phone.value + '?body=Meetz: "> Text' + '</a></td>';
+                              tmp += '</tr>';
+                              //break; // just take the first one we find
                             }
                           }
                         }
+                        //console.log('emails:');
+                        //console.log(contacts[i].emails);
                         console.log('phone numbers:');
                         console.log(contacts[i].phoneNumbers);
                     }
-                    //$('#contacts-body li:last-child').append(tmp);
-                  //$('#contacts-body li:last-child').prepend(tmp);
-                  //$("<li/>").appendTo("#contacts-body").html(tmp);
-                  //$('#contacts-body').html(tmp);
-                  $('#contacts-body').listview('refresh');
+                    $('#contacts-body').html(tmp);
                 },
                 function (contactError) {
                     alert('onError!');

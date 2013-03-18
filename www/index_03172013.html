@@ -74,9 +74,34 @@
     </div>
   </div>
   <div data-role="content">
-    <div id="contacts-list">
-
+    <!--
+    <label> <input type="checkbox" name="checkbox-1 "/> I'm a checkbox</label>
+    <label> <input type="checkbox" name="checkbox-2 "/> I'm a checkbox2</label>
+    <div data-role="collapsible-set" data-theme="c" data-content-theme="c">
     </div>
+
+    <form>
+      <fieldset data-role="controlgroup">
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:30%">Status</div>
+            <div class="ui-block-b" style="width:38%">Name</div>
+            <div class="ui-block-c" style="width:32%">Number</div>
+          </div>
+        <input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
+        <label for="checkbox-h-6a">
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:20%">PT</div>
+            <div class="ui-block-b" style="width:47%">Phil Thoren</div>
+            <div class="ui-block-c" style="width:33%"><a href="tel:4085551212">Call</a> <a href="sms:4085551212?body=Meetz: "> Text</a></div>
+          </div>
+        </label>
+        <input type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
+        <label for="checkbox-h-6b">Two</label>
+        <input type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+        <label for="checkbox-h-6c">Three</label>
+      </fieldset>
+    </form>
+    -->
     <ul data-role="listview" data-inset="true" data-theme="b" id="contacts-body">
 
       <li>
@@ -91,19 +116,90 @@
           <div class="ui-grid-b">
             <div class="ui-block-a" style="width:20%">PT</div>
             <div class="ui-block-b" style="width:47%">Phil Thoren</div>
-            <div class="ui-block-c" style="width:33%"><a href="tel:4085551212">C</a> <a href="sms:4085551212?body=Meetz: "> T</a></div>
+            <div class="ui-block-c" style="width:33%"><a href="tel:4085551212">Call</a> <a href="sms:4085551212?body=Meetz: "> Text</a></div>
           </div>
         </label>
       </li>
+      <!--
       <li>
         <label> <input type="checkbox" name="meetz-1 "/>
           <div class="ui-grid-b">
             <div class="ui-block-a" style="width:20%">PT</div>
             <div class="ui-block-b" style="width:47%">Phil Thoren</div>
-            <div class="ui-block-c" style="width:33%"><a href="tel:4085551212">C</a> <a href="sms:4085551212?body=Meetz: "> T</a></div>
+            <div class="ui-block-c" style="width:33%"><a href="tel:4085551212">Call</a> <a href="sms:4085551212?body=Meetz: "> Text</a></div>
           </div>
         </label>
       </li>
+  <li>
+    <div class="ui-grid-c">
+      <div class="ui-block-a"><input type="checkbox" name="meetz" value="1"/> Block A</div>
+      <div class="ui-block-b">Block B</div>
+      <div class="ui-block-c">Block C</div>
+        <div class="ui-block-d">Block D</div>
+    </div>
+      </li>
+        <li >
+          <input type="checkbox" name="meetz" value="1"/>
+          <div class="ui-grid-b">
+                <div class="ui-block-a">Block A</div>
+                <div class="ui-block-b">Block B</div>
+                <div class="ui-block-c">Block C</div>
+            </div>
+
+
+        </li>
+        <li>
+        <a href="#">
+          <div class="ui-grid-b">
+
+            <div class="ui-block-a" style="width:35%">Block AAAAAAAAAAA  AAAAAAAAAAAAA</div>
+            <div class="ui-block-b" style="width:20%">Block BBBBBBBBBBB BBBBBBBBB</div>
+            <div class="ui-block-c" style="width:20%">Block CCCCCCCCCCC CCCCCCCC</div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <div class="ui-grid-b">
+
+          <div class="ui-block-a" style="width:35%">Block AAAAAAAAAAA AAAAAAAAAAAAA</div>
+          <div class="ui-block-b" style="width:20%" >Block BBBBBBBBBBB BBBBBBBBB</div>
+          <div class="ui-block-c" style="width:20%" >Block CCCCCCCCCCC CCCCCCCC</div>
+        </div>
+
+      </li>
+
+      <li>
+        <div class="ui-grid-b">
+         <div class="ui-block-a" style="width:20%"></div>
+          <div class="ui-block-b" style="width:25%">Status</div>
+          <div class="ui-block-c" style="width:30%">Name</div>
+          <div class="ui-block-d" style="width:25%">Message Number</div>
+        </div>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="ui-grid-b">
+            <div class="ui-grid-b">
+              <div class="ui-block-a" style="width:20%"><input type="checkbox" name="meetz" value=""/></div>
+              <div class="ui-block-b" style="width:25%">TT</div>
+              <div class="ui-block-c" style="width:30%">Test Name</div>
+              <div class="ui-block-d" style="width:25%">Test Message Number</div>
+            </div>
+          </div>
+        </a>
+      <li>
+        <table data-inset="true" data-role="contacts-table" id="my-table" data-mode="reflow" class="ui-body-d ui-shadow table-stripe ui-responsive" >
+          <thead>
+            <th>Status</th>
+            <th>Name</th>
+            <th>Message Number</th>
+          </thead>
+          <tbody id="contacts-body">
+          </tbody>
+        </table>
+      </li>
+-->
     </ul>
   </div>
   <div data-role="tabbar" data-iconpos="top" data-theme="a">
