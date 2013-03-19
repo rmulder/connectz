@@ -54,149 +54,42 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-/*
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-*/
         var options = new ContactFindOptions();
-        //options.filter="Mulder";
         options.filter="";  options.multiple=true;  var fields = [ "displayName", "name", "phoneNumbers", "photos" ];
-        //var fields = ["displayName", "name"];
         navigator.contacts.find(fields,
                 function(contacts) {
-                    console.log(contacts);
-                  //alert('contacts.length:' + contacts.length);
-                  var tmp = '', fi, li, i, j, arrContactDetails = new Array();
-                  /*
-                  if (contacts.length) {
+                  console.log(contacts);
+                  var tmp = '', fi, li, i, j, contactObject, phone;
+                  for (i = 0; i < contacts.length; i++) {
+                    if (contacts[i].phoneNumbers) {
+                      contactObject = contacts[i];
+                      console.log(contacts[i].name.givenName);
+                      for (j = 0; j < contactObject.phoneNumbers.length; j++) {
+                        phone = contactObject.phoneNumbers[j];
+                        console.log('phoneNumber:');
+                        console.log(phone);
+                        if (phone.type === 'mobile' || phone.type === 'other') {
+                          tmp = '';
+                          fi = (contactObject.name.givenName) ? contactObject.name.givenName.substring(0,1) : '';
+                          li = (contactObject.name.familyName) ? contactObject.name.familyName.substring(0,1) : '';
 
-                    var arrContactDetails = new Array();
-                    for(var i=0; i<contacts.length; ++i){
-                      if(contacts[i].name){
-                        arrContactDetails.push(contacts[i]);
-                      }
-                    }
-
-                    arrContactDetails.sort(alphabeticalSort);
-
-                    var alphaHeader = arrContactDetails[0].name.formatted[0];
-                    for(var i=0; i<arrContactDetails.length; ++i) {
-                      var contactObject = arrContactDetails[i];
-                      if( alphaHeader != contactObject.name.formatted[0] ) {
-                        alphaHeader = contactObject.name.formatted[0];
-                        $('#contactList').append('<li data-role="list-divider">' + alphaHeader + '</li>');
-                        $('#contactList').append('<li class="contact_list_item" id="' + contactObject.id + '"><a href="#contact-info">' + contactObject.name.formatted + ' (' + contactObject.id + ')</a></li>');
-                      } else {
-                        if( i == 0 ) {
-                          $('#contactList').append('<li data-role="list-divider">' + alphaHeader + '</li>');
+                          tmp += '<li>';
+                          tmp += '  <label> <input type="checkbox" value="' + contactObject.id + '"/>';
+                          tmp += '    <div class="ui-grid-b">';
+                          tmp += '      <div class="ui-block-a" style="width:13%"> ' + fi + li + '</div>';
+                          tmp += '      <div class="ui-block-b" style="width:49%">' + contactObject.name.givenName + ' ' + contactObject.name.familyName + '</div>';
+                          tmp += '      <div class="ui-block-c" style="width:38%"><a href="tel:' + phone.value + '">' + phone.value + '</a></div>';
+                          tmp += '    </div>';
+                          tmp += '  </label>';
+                          tmp += '</li>';
+                          console.log(tmp);
+                          $('#contactList').append(tmp);
                         }
-                        $('#contactList').append('<li class="contact_list_item" id="' + contactObject.id + '"><a href="#contact-info">' + contactObject.name.formatted + ' (' + contactObject.id + ')</a></li>');
                       }
-
                     }
-
-                  } else {
-                    $('#contactList').append('<li><h3>Sorry, no contacts were found</h3></li>');
                   }
-
                   $('#contactList').listview("refresh");
- */
-                    for (i = 0; i < contacts.length; i++) {
-                        if (contacts[i].phoneNumbers) {
-                          arrContactDetails.push(contacts[i]);
-                          /*
-                          for (j = 0; j < contacts[i].phoneNumbers.length; j++) {
-                            console.log('one');
-                            var phone = contacts[i].phoneNumbers[j];
-                            console.log('phoneNumber:');
-                            console.log(phone);
-                            if (phone.type === 'mobile' || phone.type === 'other') {
-                              tmp = '';
-                              fi = (contacts[i].name.givenName) ? contacts[i].name.givenName.substring(0,1) : '';
-                              li = (contacts[i].name.familyName) ? contacts[i].name.familyName.substring(0,1) : '';
-
-                              //tmp += '<li>';
-                              tmp += '  <label> <input type="checkbox" name="meetz-1 "/>';
-                              tmp += '    <div class="ui-grid-b">';
-                              tmp += '      <div class="ui-block-a" style="width:20%"> ' + fi + li + '</div>';
-                              tmp += '      <div class="ui-block-b" style="width:47%">' + contacts[i].name.givenName + ' ' + contacts[i].name.familyName + '</div>';
-                              tmp += '      <div class="ui-block-c" style="width:33%"><a href="tel:' + phone.value + '">C</a> <a href="sms:' + phone.value + '?body=Meetz: "> T</a></div>';
-                              tmp += '    </div>';
-                              tmp += '  </label>';
-                              //tmp += '</li>';
-                              console.log(tmp);
-                              //$('#contacts-body').html(tmp);
-                              var $list = $("ul#contacts-body");
-                              $list.find(".last-child").removeClass("last-child");
-                              var $li = $("<li>", {"class": "last-child"}).html(tmp);
-                              $list.append($li);
-                            }
-                          }
-                          */
-                          console.log('two');
-                        }
-                        console.log('phone numbers:');
-                        console.log(contacts[i].phoneNumbers);
-                    }
-                  //$('#contacts-body li:last-child').append(tmp);
-                  //$('#contacts-body li:last-child').prepend(tmp);
-                  //$("<li/>").appendTo("#contacts-body").html(tmp);
-                  //$('#contacts-body').html(tmp);
-                  $('#contacts-body').listview('refresh');
-                  //alert('three');
-                  arrContactDetails.sort(alphabeticalSort);
-                  console.log(arrContactDetails);
-                  var alphaHeader = arrContactDetails[0].name.formatted[0];
-                  //alert('five:' + arrContactDetails.length);
-                  for( i=0; i<arrContactDetails.length; ++i) {
-                    var contactObject = arrContactDetails[i];
-                    console.log(contactObject.name.givenName);
-                    for (j = 0; j < contactObject.phoneNumbers.length; j++) {
-                      console.log('one');
-                      var phone = contactObject.phoneNumbers[j];
-                      console.log('phoneNumber:');
-                      console.log(phone);
-                      if (phone.type === 'mobile' || phone.type === 'other') {
-                        tmp = '';
-                        fi = (contactObject.name.givenName) ? contactObject.name.givenName.substring(0,1) : '';
-                        li = (contactObject.name.familyName) ? contactObject.name.familyName.substring(0,1) : '';
-
-                        tmp += '<li>';
-                        tmp += '  <label> <input type="checkbox" value="' + contactObject.id + '"/>';
-                        tmp += '    <div class="ui-grid-b">';
-                        tmp += '      <div class="ui-block-a" style="width:20%"> ' + fi + li + '</div>';
-                        tmp += '      <div class="ui-block-b" style="width:47%">' + contactObject.name.givenName + ' ' + contactObject.name.familyName + '</div>';
-                        tmp += '      <div class="ui-block-c" style="width:33%"><a href="tel:' + phone.value + '">C</a> <a href="sms:' + phone.value + '?body=Meetz: "> T</a></div>';
-                        tmp += '    </div>';
-                        tmp += '  </label>';
-                        tmp += '</li>';
-                        console.log(tmp);
-                        $('#contactList').append(tmp);
-                        $('#contactList').listview("refresh");
-                      }
-                    }
-                    /*
-                    if( alphaHeader != contactObject.name.formatted[0] ) {
-                      alphaHeader = contactObject.name.formatted[0];
-                      $('#contactList').append('<li data-role="list-divider">' + alphaHeader + '</li>');
-                      $('#contactList').append('<li class="contact_list_item" id="' + contactObject.id + '"><a href="#contact-info">' + contactObject.name.formatted + ' (' + contactObject.id + ')</a></li>');
-                    } else {
-                      if( i == 0 ) {
-                        $('#contactList').append('<li data-role="list-divider">' + alphaHeader + '</li>');
-                      }
-                      $('#contactList').append('<li class="contact_list_item" id="' + contactObject.id + '"><a href="#contact-info">' + contactObject.name.formatted + ' (' + contactObject.id + ')</a></li>');
-                    }
-                    */
-                  }
                   $('#contactList').trigger('create');
-                  //$("#home").page();
-                  //$.mobile.changePage("#home", {transition: "none"});
-                  //$('#home').page('refresh', true);
-                  //alert('done');
                 },
                 function (contactError) {
                     alert('onError!');

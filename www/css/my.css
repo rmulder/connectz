@@ -488,5 +488,9 @@
 }
 
 .ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
-  padding: .1em 5px;
+  padding: 1px 1px;
+}
+
+.ui-btn-inner {
+  font-size: 12px;
 }

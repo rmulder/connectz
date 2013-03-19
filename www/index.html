@@ -42,6 +42,7 @@
   </script>
 </head>
 <body>
+
 <!-- home -->
 <div data-role="page" id="home">
   <div data-theme="b" data-role="header" data-position="fixed">
@@ -74,65 +75,51 @@
     </div>
   </div>
   <div data-role="content">
-    <ul id="contactList" data-role="listview" data-inset="true" data-theme="b">
+    <ul id="contactList" data-role="listview" data-inset="false" data-theme="b">
       <li>
         <div class="ui-grid-b">
-          <div class="ui-block-a" style="width:20%">Status</div>
-          <div class="ui-block-b" style="width:48%">Name</div>
-          <div class="ui-block-c" style="width:32%">Number</div>
-        </div>
-      </li>
-    </ul>
-
-    <ul data-role="listview" data-inset="true" data-theme="b" id="contacts-body">
-
-      <li>
-        <div class="ui-grid-b">
-          <div class="ui-block-a" style="width:20%">Status</div>
-          <div class="ui-block-b" style="width:48%">Name</div>
-          <div class="ui-block-c" style="width:32%">Number</div>
+          <div class="ui-block-a" style="width:23%">Status</div>
+          <div class="ui-block-b" style="width:44%">Name</div>
+          <div class="ui-block-c" style="width:33%">Message #</div>
         </div>
       </li>
       <li>
         <label> <input type="checkbox" name="meetz-1 "/>
           <div class="ui-grid-b">
-            <div class="ui-block-a" style="width:20%">PT</div>
-            <div class="ui-block-b" style="width:47%">Phil Thoren</div>
-            <div class="ui-block-c" style="width:33%"><a href="tel:4085551212">C</a> <a href="sms:4085551212?body=Meetz: "> T</a></div>
-          </div>
-        </label>
-      </li>
-      <li>
-        <label> <input type="checkbox" name="meetz-1 "/>
-          <div class="ui-grid-b">
-            <div class="ui-block-a" style="width:20%">PT</div>
-            <div class="ui-block-b" style="width:47%">Phil Thoren</div>
-            <div class="ui-block-c" style="width:33%"><a href="tel:4085551212">C</a> <a href="sms:4085551212?body=Meetz: "> T</a></div>
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
           </div>
         </label>
       </li>
     </ul>
   </div>
-  <div data-role="tabbar" data-iconpos="top" data-theme="a">
-    <ul>
-      <li>
-        <a href="#home" data-transition="fade" data-theme="" data-icon="home">
-          home
-        </a>
-      </li>
-      <li>
-        <a href="#meetz" data-transition="fade" data-theme="" data-icon="chat">
-          meetz
-        </a>
-      </li>
-      <li>
-        <a href="#mapz" data-transition="fade" data-theme="" data-icon="mappin">
-          mapz
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+  <div data-role="footer" data-id="foo1" data-position="fixed">
+    <div data-role="navbar">
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+        <ul>
+          <li>
+            <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+              home
+            </a>
+          </li>
+          <li>
+            <a href="#meetz" data-transition="fade" data-theme="" data-icon="chat">
+              meetz
+            </a>
+          </li>
+          <li>
+            <a href="#mapz" data-transition="fade" data-theme="" data-icon="mappin">
+              mapz
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+
+</div><!-- end home -->
+
 <!-- meetz -->
 <div data-role="page" id="meetz">
   <div data-theme="b" data-role="header" data-position="fixed">
@@ -166,26 +153,31 @@
   </div>
   <div data-role="content">
   </div>
-  <div data-role="tabbar" data-iconpos="top" data-theme="a">
-    <ul>
-      <li>
-        <a href="#home" data-transition="fade" data-theme="" data-icon="home">
-          home
-        </a>
-      </li>
-      <li>
-        <a href="#meetz" data-transition="fade" data-theme="" data-icon="star">
-          meetz
-        </a>
-      </li>
-      <li>
-        <a href="#mapz" data-transition="fade" data-theme="" data-icon="search">
-          mapz
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+  <div data-role="footer" data-id="foo1" data-position="fixed">
+    <div data-role="navbar">
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+        <ul>
+          <li>
+            <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+              home
+            </a>
+          </li>
+          <li>
+            <a href="#meetz" data-transition="fade" data-theme="" data-icon="chat">
+              meetz
+            </a>
+          </li>
+          <li>
+            <a href="#mapz" data-transition="fade" data-theme="" data-icon="mappin">
+              mapz
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- edd meetz -->
+
 <!-- mapz -->
 <div data-role="page" id="mapz">
   <div data-theme="b" data-role="header" data-position="fixed">
@@ -218,26 +210,30 @@
     <img src="https://maps.googleapis.com/maps/api/staticmap?center=San Jose, CA&amp;zoom=12&amp;size=288x200&amp;markers=San Jose, CA&amp;sensor=false"
          width="288" height="200">
   </div>
-  <div data-role="tabbar" data-iconpos="top" data-theme="a">
-    <ul>
-      <li>
-        <a href="#home" data-transition="fade" data-theme="" data-icon="home">
-          home
-        </a>
-      </li>
-      <li>
-        <a href="#meetz" data-transition="fade" data-theme="" data-icon="star">
-          meetz
-        </a>
-      </li>
-      <li>
-        <a href="#mapz" data-transition="fade" data-theme="" data-icon="search">
-          mapz
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+  <div data-role="footer" data-id="foo1" data-position="fixed">
+    <div data-role="navbar">
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+        <ul>
+          <li>
+            <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+              home
+            </a>
+          </li>
+          <li>
+            <a href="#meetz" data-transition="fade" data-theme="" data-icon="chat">
+              meetz
+            </a>
+          </li>
+          <li>
+            <a href="#mapz" data-transition="fade" data-theme="" data-icon="mappin">
+              mapz
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- end mapz -->
 
 <script type="text/javascript" src="cordova-2.4.0.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDTGR9VjM2t5ixumkk_jHg155s0C1S5g3Y&sensor=true"></script>
