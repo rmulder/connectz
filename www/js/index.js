@@ -59,7 +59,7 @@ var app = {
         navigator.contacts.find(fields,
                 function(contacts) {
                   console.log(contacts);
-                  var tmp = '', fi, li, i, j, contactObject, phone;
+                  var tmp = '', fi, li, i, j, contactObject, phone, first, last;
                   for (i = 0; i < contacts.length; i++) {
                     if (contacts[i].phoneNumbers) {
                       contactObject = contacts[i];
@@ -70,14 +70,16 @@ var app = {
                         console.log(phone);
                         if (phone.type === 'mobile' || phone.type === 'other') {
                           tmp = '';
-                          fi = (contactObject.name.givenName) ? contactObject.name.givenName.substring(0,1) : '';
-                          li = (contactObject.name.familyName) ? contactObject.name.familyName.substring(0,1) : '';
+                          first = (contactObject.name.givenName && contactObject.name.givenName !== 'null') ? contactObject.name.givenName : '';
+                          last = (contactObject.name.familyName && contactObject.name.familyName !== 'null') ? contactObject.name.familyName : '';
+                          fi = (first) ? first.substring(0,1) : '';
+                          li = (last) ? last.substring(0,1) : '';
 
                           tmp += '<li>';
                           tmp += '  <label> <input type="checkbox" value="' + contactObject.id + '"/>';
                           tmp += '    <div class="ui-grid-b">';
                           tmp += '      <div class="ui-block-a" style="width:13%"> ' + fi + li + '</div>';
-                          tmp += '      <div class="ui-block-b" style="width:49%">' + contactObject.name.givenName + ' ' + contactObject.name.familyName + '</div>';
+                          tmp += '      <div class="ui-block-b" style="width:49%">' + first + ' ' + last + '</div>';
                           tmp += '      <div class="ui-block-c" style="width:38%"><a href="tel:' + phone.value + '">' + phone.value + '</a></div>';
                           tmp += '    </div>';
                           tmp += '  </label>';
