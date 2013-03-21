@@ -494,3 +494,11 @@
 .ui-btn-inner {
   font-size: 12px;
 }
+
+.ui-input-search input.ui-input-text {
+  width: 70%;
+}
+.ui-input-search {
+  width: 75%;
+  float: left;
+}
