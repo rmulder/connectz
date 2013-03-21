@@ -496,9 +496,14 @@
 }
 
 .ui-input-search input.ui-input-text {
-  width: 70%;
+  width: 60%;
 }
 .ui-input-search {
-  width: 75%;
+  width: 63%;
   float: left;
+  margin-left: 5px;
+}
+
+.ui-body-c .ui-link:visited, .ui-body-c .ui-link {
+  color: #222;
 }
