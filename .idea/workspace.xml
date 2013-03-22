@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9625f072-90d0-4914-ae9f-5c36bd22158b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/Colors for GlobalDotz.rtf" afterPath="$PROJECT_DIR$/www/Colors for GlobalDotz.rtf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/my.css" afterPath="$PROJECT_DIR$/www/css/my.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
     </list>
     <ignored path="connectz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +27,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="48" selection-start="2484" selection-end="2484" vertical-scroll-proportion="-38.75">
+            <state line="56" column="178" selection-start="2299" selection-end="2299" vertical-scroll-proportion="-9.375">
               <folding />
             </state>
           </provider>
@@ -36,7 +36,7 @@
       <file leaf-file-name="connectz.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/connectz.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1174" column="0" selection-start="50328" selection-end="50328" vertical-scroll-proportion="-32.615383">
+            <state line="1174" column="0" selection-start="50328" selection-end="50328" vertical-scroll-proportion="-29.807692">
               <folding />
             </state>
           </provider>
@@ -58,7 +58,7 @@
       <file leaf-file-name="my.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/css/my.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="523" column="20" selection-start="12808" selection-end="12808" vertical-scroll-proportion="0.9326599">
+            <state line="545" column="20" selection-start="13084" selection-end="13084" vertical-scroll-proportion="0.96633">
               <folding />
             </state>
           </provider>
@@ -81,8 +81,8 @@
         <option value="$PROJECT_DIR$/www/css/jqm-icon-pack-2.0-original.css" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/css/connectz.css" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/index.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/css/my.css" />
       </list>
     </option>
@@ -203,28 +203,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="connectz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="connectz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -470,11 +448,6 @@
         <state line="10" column="36" selection-start="318" selection-end="318" vertical-scroll-proportion="0.16835018" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1787" selection-end="1796" vertical-scroll-proportion="-2.517588" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/jqm-icon-pack-2.0-original.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="37" selection-start="2515" selection-end="2515" vertical-scroll-proportion="0.01659292">
@@ -496,13 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/connectz.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1174" column="0" selection-start="50328" selection-end="50328" vertical-scroll-proportion="-32.615383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="45" selection-start="4451" selection-end="4451" vertical-scroll-proportion="0.0">
@@ -514,16 +480,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="13" selection-start="1787" selection-end="1796" vertical-scroll-proportion="0.03318584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/connectz.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1174" column="0" selection-start="50328" selection-end="50328" vertical-scroll-proportion="-29.807692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="48" selection-start="2484" selection-end="2484" vertical-scroll-proportion="-38.75">
+        <state line="56" column="178" selection-start="2299" selection-end="2299" vertical-scroll-proportion="-9.375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="523" column="20" selection-start="12808" selection-end="12808" vertical-scroll-proportion="0.9326599">
+        <state line="545" column="20" selection-start="13084" selection-end="13084" vertical-scroll-proportion="0.96633">
           <folding />
         </state>
       </provider>
