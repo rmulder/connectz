@@ -496,14 +496,30 @@
 }
 
 .ui-input-search input.ui-input-text {
-  width: 58%;
+  width: 50%;
 }
 .ui-input-search {
-  width: 60%;
+  width: 55%;
   float: left;
   margin-left: 5px;
 }
 
 .ui-body-c .ui-link:visited, .ui-body-c .ui-link {
   color: #222;
+}
+
+.ui-navbar li .ui-btn {
+  margin: 0;
+}
+
+.ui-header .ui-navbar li .ui-btn, .ui-footer .ui-navbar li .ui-btn {
+  padding-top: 0;
+}
+
+div.ui-footer a.ui-btn span.ui-btn-inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ui-navbar li .ui-btn-icon-top .ui-btn-inner {
+  padding-top: 20px;
 }

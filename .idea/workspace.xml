@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9625f072-90d0-4914-ae9f-5c36bd22158b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/find.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/share.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/spot.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/map.png" afterPath="$PROJECT_DIR$/www/img/map.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/meetz.png" afterPath="$PROJECT_DIR$/www/img/meetz.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/connectz.css" afterPath="$PROJECT_DIR$/www/css/connectz.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/Colors for GlobalDotz.rtf" afterPath="$PROJECT_DIR$/www/Colors for GlobalDotz.rtf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/my.css" afterPath="$PROJECT_DIR$/www/css/my.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
     </list>
     <ignored path="connectz.iws" />
@@ -32,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="48" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.38062283">
+            <state line="62" column="48" selection-start="2484" selection-end="2484" vertical-scroll-proportion="-38.75">
               <folding />
             </state>
           </provider>
@@ -53,20 +45,20 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="125" selection-start="3905" selection-end="3905" vertical-scroll-proportion="0.0">
+            <state line="96" column="45" selection-start="4451" selection-end="4451" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1363909223000" expanded="false" signature="3627:3636" placeholder="..." />
-                <marker date="1363909223000" expanded="false" signature="3734:3743" placeholder="..." />
-                <marker date="1363909223000" expanded="false" signature="3851:3860" placeholder="..." />
+                <marker date="1363922279000" expanded="false" signature="3664:3673" placeholder="..." />
+                <marker date="1363922279000" expanded="false" signature="3771:3780" placeholder="..." />
+                <marker date="1363922279000" expanded="false" signature="3888:3897" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="my.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/css/my.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="501" column="11" selection-start="12417" selection-end="12417" vertical-scroll-proportion="0.0">
+            <state line="523" column="20" selection-start="12808" selection-end="12808" vertical-scroll-proportion="0.9326599">
               <folding />
             </state>
           </provider>
@@ -88,10 +80,10 @@
         <option value="$PROJECT_DIR$/www/index_save.html" />
         <option value="$PROJECT_DIR$/www/css/jqm-icon-pack-2.0-original.css" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
-        <option value="$PROJECT_DIR$/www/js/index.js" />
-        <option value="$PROJECT_DIR$/www/css/my.css" />
         <option value="$PROJECT_DIR$/www/css/connectz.css" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/js/index.js" />
+        <option value="$PROJECT_DIR$/www/css/my.css" />
       </list>
     </option>
   </component>
@@ -409,9 +401,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="108" selection-start="3535" selection-end="3535" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1363909223000" expanded="false" signature="3627:3636" placeholder="..." />
-            <marker date="1363909223000" expanded="false" signature="3734:3743" placeholder="..." />
-            <marker date="1363909223000" expanded="false" signature="3851:3860" placeholder="..." />
+            <marker date="1363922279000" expanded="false" signature="3664:3673" placeholder="..." />
+            <marker date="1363922279000" expanded="false" signature="3771:3780" placeholder="..." />
+            <marker date="1363922279000" expanded="false" signature="3888:3897" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -434,9 +426,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="108" selection-start="3535" selection-end="3535" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1363909223000" expanded="false" signature="3627:3636" placeholder="..." />
-            <marker date="1363909223000" expanded="false" signature="3734:3743" placeholder="..." />
-            <marker date="1363909223000" expanded="false" signature="3851:3860" placeholder="..." />
+            <marker date="1363922279000" expanded="false" signature="3664:3673" placeholder="..." />
+            <marker date="1363922279000" expanded="false" signature="3771:3780" placeholder="..." />
+            <marker date="1363922279000" expanded="false" signature="3888:3897" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -504,24 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="125" selection-start="3905" selection-end="3905" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1363909223000" expanded="false" signature="3627:3636" placeholder="..." />
-            <marker date="1363909223000" expanded="false" signature="3734:3743" placeholder="..." />
-            <marker date="1363909223000" expanded="false" signature="3851:3860" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/my.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="501" column="11" selection-start="12417" selection-end="12417" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/connectz.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1174" column="0" selection-start="50328" selection-end="50328" vertical-scroll-proportion="-32.615383">
@@ -529,9 +503,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="45" selection-start="4451" selection-end="4451" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1363922279000" expanded="false" signature="3664:3673" placeholder="..." />
+            <marker date="1363922279000" expanded="false" signature="3771:3780" placeholder="..." />
+            <marker date="1363922279000" expanded="false" signature="3888:3897" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="48" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.38062283">
+        <state line="62" column="48" selection-start="2484" selection-end="2484" vertical-scroll-proportion="-38.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/my.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="523" column="20" selection-start="12808" selection-end="12808" vertical-scroll-proportion="0.9326599">
           <folding />
         </state>
       </provider>

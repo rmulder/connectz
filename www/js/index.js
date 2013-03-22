@@ -49,6 +49,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+      $.mobile.showPageLoadingMsg();
         app.receivedEvent('deviceready');
         //app.startGPS();
     },
@@ -93,13 +94,14 @@ var app = {
                   }
                   $('#contactList').listview("refresh");
                   $('#contactList').trigger('create');
+                  $.mobile.hidePageLoadingMsg();
                 },
                 function (contactError) {
                     alert('onError!');
                 },
                 options);
-        
-        console.log('Received Event: ' + id);
+
+      console.log('Received Event: ' + id);
     },
 
     startGPS: function() {
