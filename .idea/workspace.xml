@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9625f072-90d0-4914-ae9f-5c36bd22158b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/my.css" afterPath="$PROJECT_DIR$/www/css/my.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
     </list>
     <ignored path="connectz.iws" />
@@ -24,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="178" selection-start="2299" selection-end="2299" vertical-scroll-proportion="-9.375">
+            <state line="75" column="12" selection-start="3201" selection-end="3201" vertical-scroll-proportion="0.62283736">
               <folding />
             </state>
           </provider>
@@ -55,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="my.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/my.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="545" column="20" selection-start="13084" selection-end="13084" vertical-scroll-proportion="0.96633">
+            <state line="545" column="20" selection-start="13084" selection-end="13084" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,8 +80,8 @@
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/css/connectz.css" />
         <option value="$PROJECT_DIR$/www/js/index.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/css/my.css" />
+        <option value="$PROJECT_DIR$/www/index.html" />
       </list>
     </option>
   </component>
@@ -494,16 +492,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
+    <entry file="file://$PROJECT_DIR$/www/css/my.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="178" selection-start="2299" selection-end="2299" vertical-scroll-proportion="-9.375">
+        <state line="545" column="20" selection-start="13084" selection-end="13084" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/my.css">
+    <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="545" column="20" selection-start="13084" selection-end="13084" vertical-scroll-proportion="0.96633">
+        <state line="75" column="12" selection-start="3201" selection-end="3201" vertical-scroll-proportion="0.62283736">
           <folding />
         </state>
       </provider>
