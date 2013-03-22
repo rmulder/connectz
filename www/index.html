@@ -14,8 +14,8 @@
 
   <link href="css/jquery.mobile-1.3.0-rc.1.min.css" rel="stylesheet" />
   <!-- if you have a custom theme, add it here -->
-  <link href="css/jqm-icon-pack-2.0-original.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/connectz.css" />
+  <link href="css/jqm-icon-pack-2.0-original.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/my.css" />
 
   <!-- Javascript includes -->
@@ -44,7 +44,7 @@
 
 <!-- home -->
 <div data-role="page" id="home">
-  <div data-theme="a" data-role="header" data-position="fixed">
+  <div data-theme="d" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="top">
       <ul>
         <li><a href="#" data-transition="fade" data-theme="" data-icon="" class="ui-btn-active ui-state-persist">who</a></li>
@@ -59,8 +59,8 @@
   </div><!-- /header -->
 
   <div data-role="content">
-    <ul id="contactList" data-role="listview" data-inset="false" data-theme="c">
-      <li>
+    <ul id="contactList" data-role="listview" data-inset="false" data-theme="a">
+      <li data-theme="b" data-role="list-divider">
         <div class="ui-grid-b" data-theme="c">
           <div class="ui-block-a" style="width:23%">Status</div>
           <div class="ui-block-b" style="width:42%">Name</div>
@@ -68,7 +68,7 @@
         </div>
       </li>
       <li>
-        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="b"/>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
           <div class="ui-grid-b">
             <div class="ui-block-a" style="width:13%">AM</div>
             <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
@@ -80,11 +80,11 @@
   </div>
   <div data-role="footer" data-id="foo1" data-position="fixed">
     <div data-role="navbar">
-      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+      <div data-role="tabbar" data-iconpos="top" data-theme="d">
         <ul>
-          <li><a href="#home" data-transition="fade" data-theme="" data-icon="home">home</a></li>
-          <li><a href="#meetz" data-transition="fade" data-theme="" data-icon="chat">meetz</a></li>
-          <li><a href="#mapz" data-transition="fade" data-theme="" data-icon="mappin">mapz</a></li>
+          <li><a href="#home" data-transition="fade" data-theme="d"><img src="img/home.png" width="60" height="60"></a></li>
+          <li><a href="#meetz" data-transition="fade" data-theme="d"><img src="img/meetz.png" width="60" height="60"></a></li>
+          <li><a href="#mapz" data-transition="fade" data-theme="d"><img src="img/map.png" width="60" height="60"></a></li>
         </ul>
       </div>
     </div><!-- /navbar -->

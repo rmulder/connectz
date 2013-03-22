@@ -59,7 +59,7 @@ var app = {
         navigator.contacts.find(fields,
                 function(contacts) {
                   console.log(contacts);
-                  var tmp = '', fi, li, i, j, contactObject, phone, first, last;
+                  var tmp = '', fi, li, i, j, contactObject, phone, first, last, rowclass = '';
                   for (i = 0; i < contacts.length; i++) {
                     if (contacts[i].phoneNumbers) {
                       contactObject = contacts[i];
@@ -69,6 +69,7 @@ var app = {
                         console.log('phoneNumber:');
                         console.log(phone);
                         if (phone.type === 'mobile' || phone.type === 'other') {
+                          rowclass = (i%2 === 0)? 'a' : 'e';
                           tmp = '';
                           first = (contactObject.name.givenName && contactObject.name.givenName !== 'null') ? contactObject.name.givenName : '';
                           last = (contactObject.name.familyName && contactObject.name.familyName !== 'null') ? contactObject.name.familyName : '';
@@ -76,7 +77,7 @@ var app = {
                           li = (last) ? last.substring(0,1) : '';
 
                           tmp += '<li>';
-                          tmp += '  <label> <input type="checkbox" value="' + contactObject.id + '"/>';
+                          tmp += '  <label> <input type="checkbox" class="checkbox-row" data-theme="' + rowclass + '" value="' + contactObject.id + '"/>';
                           tmp += '    <div class="ui-grid-b">';
                           tmp += '      <div class="ui-block-a" style="width:13%"> ' + fi + li + '</div>';
                           tmp += '      <div class="ui-block-b" style="width:49%">' + first + ' ' + last + '</div>';
