@@ -42,13 +42,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-      document.addEventListener('mobileinit', this.onMobileInit, false);
       document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // mobileinit Event Handler
-    //
-    onMobileInit: function() {
-      $.mobile.touchOverflowEnabled = true;
     },
     // deviceready Event Handler
     //
@@ -78,14 +72,13 @@ var app = {
                         console.log(phone);
                         if (phone.type === 'mobile' || phone.type === 'other') {
                           rowclass = (row%2 === 0)? 'a' : 'e';
-                          tmp = '';
                           first = (contactObject.name.givenName && contactObject.name.givenName !== 'null') ? contactObject.name.givenName : '';
                           last = (contactObject.name.familyName && contactObject.name.familyName !== 'null') ? contactObject.name.familyName : '';
                           fi = (first) ? first.substring(0,1) : '';
                           li = (last) ? last.substring(0,1) : '';
 
                           tmp += '<li>';
-                          tmp += '  <label> <input type="checkbox" class="checkbox-row" data-theme="' + rowclass + '" value="' + contactObject.id + '"/>';
+                          tmp += '  <label data-corners="false"> <input type="checkbox" class="checkbox-row" data-theme="' + rowclass + '" value="' + contactObject.id + '"/>';
                           tmp += '    <div class="ui-grid-b">';
                           tmp += '      <div class="ui-block-a" style="width:13%"> ' + fi + li + '</div>';
                           tmp += '      <div class="ui-block-b" style="width:49%">' + first + ' ' + last + '</div>';
@@ -93,13 +86,13 @@ var app = {
                           tmp += '    </div>';
                           tmp += '  </label>';
                           tmp += '</li>';
-                          console.log(tmp);
-                          $('#contactList').append(tmp);
                           row++;
                         }
                       }
                     }
                   }
+                  console.log(tmp);
+                  $('#contactList').append(tmp);
                   $('#contactList').listview("refresh");
                   //$('#contactList').trigger('create').trigger('updatelayout');
                   $('#contactList').trigger('create');
