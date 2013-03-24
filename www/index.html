@@ -43,7 +43,7 @@
 <body>
 
 <!-- home -->
-<div data-role="page" id="home">
+<section data-role="page" id="home">
   <div data-theme="d" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="top">
       <ul>
@@ -54,11 +54,11 @@
       </ul>
     </div>
     <div>
-      <input name="" id="searchinput1" placeholder="Context:" value="" type="search" data-inline="true"><a href="#home" data-role="button" data-inline="true" class="search-button">Search</a>
+      <input name="" id="searchinput1" placeholder="Context:" value="" type="search" data-inline="true"><a href="#home" data-role="button" data-inline="true" class="search-button">Send</a>
     </div>
   </div><!-- /header -->
 
-  <div data-role="content">
+  <div data-role="content" class="scrollable">
     <ul id="contactList" data-role="listview" data-inset="false" data-theme="a">
       <li data-theme="b" data-role="list-divider">
         <div class="ui-grid-b" data-theme="c">
@@ -67,7 +67,8 @@
           <div class="ui-block-c" style="width:35%">Message #</div>
         </div>
       </li>
-      <li class="sample-row hidden">
+<!--
+      <li id="sample-row">
         <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
           <div class="ui-grid-b">
             <div class="ui-block-a" style="width:13%">AM</div>
@@ -76,9 +77,100 @@
           </div>
         </label>
       </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+-->
     </ul>
   </div>
-  <div data-role="footer" data-id="foo1" data-position="fixed">
+  <footer data-role="footer" data-position="fixed">
     <div data-role="navbar">
       <div data-role="tabbar" data-iconpos="top" data-theme="d">
         <ul>
@@ -88,12 +180,12 @@
         </ul>
       </div>
     </div><!-- /navbar -->
-  </div><!-- /footer -->
+  </footer><!-- /footer -->
 
-</div><!-- /home -->
+</section><!-- /home -->
 
 <!-- meetz -->
-<div data-role="page" id="meetz">
+<section data-role="page" id="meetz">
   <div data-theme="d" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="top">
       <ul>
@@ -110,7 +202,7 @@
 
   <div data-role="content">
   </div>
-  <div data-role="footer" data-id="foo1" data-position="fixed">
+  <footer data-role="footer" data-position="fixed">
     <div data-role="navbar">
       <div data-role="tabbar" data-iconpos="top" data-theme="d">
         <ul>
@@ -120,11 +212,11 @@
         </ul>
       </div>
     </div><!-- /navbar -->
-  </div><!-- /footer -->
-</div><!-- /meetz -->
+  </footer><!-- /footer -->
+</section><!-- /meetz -->
 
 <!-- mapz -->
-<div data-role="page" id="mapz">
+<section data-role="page" id="mapz">
   <div data-theme="d" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="top">
       <ul>
@@ -140,7 +232,7 @@
     <img src="https://maps.googleapis.com/maps/api/staticmap?center=San Jose, CA&amp;zoom=12&amp;size=288x200&amp;markers=San Jose, CA&amp;sensor=false"
          width="288" height="200">
   </div>
-  <div data-role="footer" data-id="foo1" data-position="fixed">
+  <footer data-role="footer" data-position="fixed">
     <div data-role="navbar">
       <div data-role="tabbar" data-iconpos="top" data-theme="d">
         <ul>
@@ -150,8 +242,8 @@
         </ul>
       </div>
     </div><!-- /navbar -->
-  </div><!-- /footer -->
-</div><!-- /mapz -->
+  </footer><!-- /footer -->
+</section><!-- /mapz -->
 
 <script type="text/javascript" src="cordova-2.4.0.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDTGR9VjM2t5ixumkk_jHg155s0C1S5g3Y&sensor=true"></script>

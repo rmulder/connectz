@@ -42,13 +42,20 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+      document.addEventListener('mobileinit', this.onMobileInit, false);
+      document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // mobileinit Event Handler
+    //
+    onMobileInit: function() {
+      $.mobile.touchOverflowEnabled = true;
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+      $('#sample-row').hide();
       $.mobile.showPageLoadingMsg();
         app.receivedEvent('deviceready');
         //app.startGPS();
@@ -60,7 +67,7 @@ var app = {
         navigator.contacts.find(fields,
                 function(contacts) {
                   console.log(contacts);
-                  var tmp = '', fi, li, i, j, contactObject, phone, first, last, rowclass = '';
+                  var tmp = '', fi, li, i, j, contactObject, phone, first, last, rowclass = '', row = 0;
                   for (i = 0; i < contacts.length; i++) {
                     if (contacts[i].phoneNumbers) {
                       contactObject = contacts[i];
@@ -70,7 +77,7 @@ var app = {
                         console.log('phoneNumber:');
                         console.log(phone);
                         if (phone.type === 'mobile' || phone.type === 'other') {
-                          rowclass = (i%2 === 0)? 'a' : 'e';
+                          rowclass = (row%2 === 0)? 'a' : 'e';
                           tmp = '';
                           first = (contactObject.name.givenName && contactObject.name.givenName !== 'null') ? contactObject.name.givenName : '';
                           last = (contactObject.name.familyName && contactObject.name.familyName !== 'null') ? contactObject.name.familyName : '';
@@ -88,12 +95,15 @@ var app = {
                           tmp += '</li>';
                           console.log(tmp);
                           $('#contactList').append(tmp);
+                          row++;
                         }
                       }
                     }
                   }
                   $('#contactList').listview("refresh");
+                  //$('#contactList').trigger('create').trigger('updatelayout');
                   $('#contactList').trigger('create');
+                  //$('#home').trigger('create');
                   $.mobile.hidePageLoadingMsg();
                 },
                 function (contactError) {

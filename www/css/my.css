@@ -528,6 +528,10 @@ div.ui-footer a.ui-btn span.ui-btn-inner {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 979px) {
   li.sample-row {
     display: none;
