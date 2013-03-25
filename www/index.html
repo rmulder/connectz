@@ -50,10 +50,10 @@
   <div data-theme="d" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="top">
       <ul>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="" class="ui-btn-active ui-state-persist">who</a></li>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="">what</a></li>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="">where</a></li>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="">when</a></li>
+        <li><a href="#" data-transition="fade" class="ui-btn-active ui-state-persist who">who</a></li>
+        <li><a href="#" data-transition="fade" class="what">what</a></li>
+        <li><a href="#" data-transition="fade" class="where">where</a></li>
+        <li><a href="#" data-transition="fade" class="when">when</a></li>
       </ul>
     </div>
 <!--    <div>
@@ -61,126 +61,160 @@
     </div>  -->
   </div><!-- /header -->
 
+<!--
+  <div data-role="popup" id="purchase" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+    <h3>Purchase Album?</h3>
+    <p>Your download will begin immediately on your mobile device when you purchase.</p>
+    <a href="index.html" data-role="button" data-rel="back" data-theme="b" data-icon="check" data-inline="true" data-mini="true">Buy: $10.99</a>
+    <a href="index.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Cancel</a>
+  </div>
+-->
   <div data-role="content" class="scrollable">
-    <ul id="contactList" data-role="listview" data-inset="false" data-theme="a" data-filter="true" data-filter-placeholder="Context:">
-      <li data-theme="b" data-role="list-divider">
-        <div class="ui-grid-b" data-theme="c">
-          <div class="ui-block-a" style="width:23%">Status</div>
-          <div class="ui-block-b" style="width:42%">Name</div>
-          <div class="ui-block-c" style="width:35%">Message #</div>
-        </div>
-      </li>
-      <li id="sample-row">
-        <label data-corners="false"> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-          <div class="ui-grid-b">
-            <div class="ui-block-a" style="width:13%">AM</div>
-            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+    <div id="home-contacts">
+      <ul id="contactList" data-role="listview" data-inset="false" data-theme="a" data-filter="true" data-filter-placeholder="Context:" data-split-icon="gear" data-split-theme="d">
+        <li data-theme="b" data-role="list-divider">
+          <div class="ui-grid-b" data-theme="c">
+            <div class="ui-block-a" style="width:23%">Status</div>
+            <div class="ui-block-b" style="width:42%">Name</div>
+            <div class="ui-block-c" style="width:35%">Message #</div>
           </div>
-        </label>
-      </li>
-      <li>
-        <label data-corners="false"> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="e"/>
-          <div class="ui-grid-b">
-            <div class="ui-block-a" style="width:13%">AM</div>
-            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+        </li>
+        <li id="sample-row">
+          <label data-corners="false"> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a" value="1"/>
+            <div class="ui-grid-b">
+              <div class="ui-block-a" style="width:13%">AM</div>
+              <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+              <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+            </div>
+          </label>
+        </li>
+        <li>
+          <label data-corners="false"> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="d" value="2"/>
+            <div class="ui-grid-b">
+              <div class="ui-block-a" style="width:13%">AM</div>
+              <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+              <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+            </div>
+          </label>
+        </li>
+        <!--
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+                  <div class="ui-grid-b">
+                    <div class="ui-block-a" style="width:13%">AM</div>
+                    <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+                    <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+                  </div>
+                </label>
+              </li>
+        -->
+      </ul>
+    </div>
+
+    <div id="home-selected" class="hidden">
+      <div class="meetz-message-row">
+        <input name="" id="meetz_message" placeholder="Context:" value="" type="search" data-inline="true"><a href="#home" data-role="button" data-inline="true" class="search-button">Send</a>
+      </div>
+      <ul id="selectedList" data-role="listview" data-inset="false" data-theme="a">
+        <li data-theme="b" data-role="list-divider">
+          <div class="ui-grid-b" data-theme="c">
+            <div class="ui-block-a" style="width:23%">Status</div>
+            <div class="ui-block-b" style="width:42%">Name</div>
+            <div class="ui-block-c" style="width:35%">Message #</div>
           </div>
-        </label>
-      </li>
-      <!--
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
-                <div class="ui-grid-b">
-                  <div class="ui-block-a" style="width:13%">AM</div>
-                  <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
-                  <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
-                </div>
-              </label>
-            </li>
-      -->
-    </ul>
+        </li>
+        <li>
+          <label data-corners="false"> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="d" value="2"/>
+            <div class="ui-grid-b">
+              <div class="ui-block-a" style="width:13%">AM</div>
+              <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+              <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+            </div>
+          </label>
+        </li>
+      </ul>
+    </div>
   </div>
   <footer data-role="footer" data-position="fixed">
     <div data-role="navbar">
@@ -195,6 +229,7 @@
   </footer><!-- /footer -->
 
 </section><!-- /home -->
+
 
 <!-- meetz -->
 <section data-role="page" id="meetz">
@@ -263,6 +298,57 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
   app.initialize();
+  $(':checkbox').on('click', function(i) {
+    //alert($(this).val());
+    //alert($(this).prop('checked'));
+    //alert($(this).is(':checked'));
+    if ($(this).is(':checked')) {
+      app.selectedIds.push($(this).val());
+    } else {
+      app.selectedIds = app.selectedIds.remove($(this).val());
+    }
+    //console.log(app.selectedIds);
+  });
+
+  $('li .what').on('click', function() {
+    //console.log(app.selectedIds);
+    $('#home-contacts').addClass('hidden');
+    //$('#selectedList').children().remove('li')
+    $('#selectedList li').each(function(index, value) {
+      if (index > 0) {
+        $(this).remove();
+      }
+    });
+    app.selectedIds.each(function(index, value) {
+      alert('index:' + index);
+      alert('value:' + value);
+    });
+    //$('#selectedList').listview("refresh");
+    $('#home-selected').removeClass('hidden');
+    console.log($('#home-selected'));
+    $('#selectedList').trigger('create');
+  });
+
+  $('li .who').on('click', function() {
+    console.log(app.selectedIds);
+    $('#home-selected').addClass('hidden');
+    $('#home-contacts').removeClass('hidden');
+    $('#home').trigger('create');
+  });
+
+  $('#contactList li').on('click', function () {
+    //alert(this);
+    //$(':checkbox:checked').each(function(i){
+    //  alert($(this).val());
+    //});
+
+    console.log($(this).find('input'));
+    var index = $(this).index();
+    console.log('clicked:' + index);
+    //alert('theme:' + $(this).find('label').data('theme'));
+    $(this).find('label').data('theme', 'b');
+    console.log($(this).find('label'));
+  });
 </script>
 </body>
 </html>

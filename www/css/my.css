@@ -557,3 +557,9 @@ div.ui-footer a.ui-btn span.ui-btn-inner {
 input.checkbox-row {
 
 }
+
+div.meetz-message-row {
+  margin: 0;
+  position: relative;
+  top: -21px;
+}

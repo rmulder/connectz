@@ -16,6 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+Array.prototype.remove = function(v) {
+  return $.grep(this, function(e) {
+    return e !== v;
+  });
+};
+
 function alphabeticalSort(a, b) {
   if (a.name.formatted < b.name.formatted){
     return -1;
@@ -32,6 +38,8 @@ var app = {
     myLocationMarker: null,
     searchCircle: null,
     myLocation: null,
+    selectedIds: [],
+    contacts: {},
 
     // Application Constructor
     initialize: function() {
@@ -47,7 +55,7 @@ var app = {
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
+    // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
       $('#sample-row').hide();
       $.mobile.showPageLoadingMsg();
@@ -60,17 +68,19 @@ var app = {
         options.filter="";  options.multiple=true;  var fields = [ "displayName", "name", "phoneNumbers", "photos" ];
         navigator.contacts.find(fields,
                 function(contacts) {
-                  console.log(contacts);
-                  var tmp = '', fi, li, i, j, contactObject, phone, first, last, rowclass = '', row = 0;
+                  var tmp = '', i, j, contactObject, phone, row = 0;
                   for (i = 0; i < contacts.length; i++) {
                     if (contacts[i].phoneNumbers) {
                       contactObject = contacts[i];
-                      console.log(contacts[i].name.givenName);
+                      //console.log(contacts[i].name.givenName);
                       for (j = 0; j < contactObject.phoneNumbers.length; j++) {
                         phone = contactObject.phoneNumbers[j];
-                        console.log('phoneNumber:');
-                        console.log(phone);
+                        //console.log('phoneNumber:');
+                        //console.log(phone);
                         if (phone.type === 'mobile' || phone.type === 'other') {
+                          app.contacts[phone.value] = contactObject;
+                          tmp += app.buildContactRow(contactObject, phone, row);
+/*
                           rowclass = (row%2 === 0)? 'a' : 'e';
                           first = (contactObject.name.givenName && contactObject.name.givenName !== 'null') ? contactObject.name.givenName : '';
                           last = (contactObject.name.familyName && contactObject.name.familyName !== 'null') ? contactObject.name.familyName : '';
@@ -86,12 +96,15 @@ var app = {
                           tmp += '    </div>';
                           tmp += '  </label>';
                           tmp += '</li>';
+*/
                           row++;
                         }
                       }
                     }
                   }
-                  console.log(tmp);
+
+                  console.log(app.contacts);
+                  //console.log(tmp);
                   $('#contactList').append(tmp);
                   $('#contactList').listview("refresh");
                   //$('#contactList').trigger('create').trigger('updatelayout');
@@ -105,6 +118,27 @@ var app = {
                 options);
 
       console.log('Received Event: ' + id);
+    },
+
+    buildContactRow: function(contactObject, phone, row) {
+      var tmp = '', fi, li, first, last,
+          rowclass = (row%2 === 0)? 'a' : 'e';
+
+      first = (contactObject.name.givenName && contactObject.name.givenName !== 'null') ? contactObject.name.givenName : '';
+      last = (contactObject.name.familyName && contactObject.name.familyName !== 'null') ? contactObject.name.familyName : '';
+      fi = (first) ? first.substring(0,1) : '';
+      li = (last) ? last.substring(0,1) : '';
+
+      tmp += '<li>';
+      tmp += '  <label data-corners="false"> <input type="checkbox" class="checkbox-row" data-theme="' + rowclass + '" value="' + contactObject.id + '"/>';
+      tmp += '    <div class="ui-grid-b">';
+      tmp += '      <div class="ui-block-a" style="width:13%"> ' + fi + li + '</div>';
+      tmp += '      <div class="ui-block-b" style="width:49%">' + first + ' ' + last + '</div>';
+      tmp += '      <div class="ui-block-c" style="width:38%"><a href="tel:' + phone.value + '">' + phone.value + '</a></div>';
+      tmp += '    </div>';
+      tmp += '  </label>';
+      tmp += '</li>';
+      return tmp;
     },
 
     startGPS: function() {
