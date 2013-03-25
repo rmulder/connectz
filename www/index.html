@@ -56,13 +56,13 @@
         <li><a href="#" data-transition="fade" data-theme="" data-icon="">when</a></li>
       </ul>
     </div>
-    <div>
+<!--    <div>
       <input name="" id="searchinput1" placeholder="Context:" value="" type="search" data-inline="true"><a href="#home" data-role="button" data-inline="true" class="search-button">Send</a>
-    </div>
+    </div>  -->
   </div><!-- /header -->
 
   <div data-role="content" class="scrollable">
-    <ul id="contactList" data-role="listview" data-inset="false" data-theme="a">
+    <ul id="contactList" data-role="listview" data-inset="false" data-theme="a" data-filter="true" data-filter-placeholder="Context:">
       <li data-theme="b" data-role="list-divider">
         <div class="ui-grid-b" data-theme="c">
           <div class="ui-block-a" style="width:23%">Status</div>
@@ -72,6 +72,15 @@
       </li>
       <li id="sample-row">
         <label data-corners="false"> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a"/>
+          <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:13%">AM</div>
+            <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
+            <div class="ui-block-c" style="width:38%"><a href="tel:4085551212">1 (707) 563-4404</a></div>
+          </div>
+        </label>
+      </li>
+      <li>
+        <label data-corners="false"> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="e"/>
           <div class="ui-grid-b">
             <div class="ui-block-a" style="width:13%">AM</div>
             <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
