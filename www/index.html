@@ -56,7 +56,11 @@
         <li><a href="#" data-role="tab" data-tab="when" data-transition="fade">when</a></li>
       </ul>
     </div>
-<!--    <div>
+    <div id="meetz-message-row" class="hidden">
+      <input name="" id="meetz_message" placeholder="Context:" value="" type="search" data-inline="true"><a href="#home" data-role="button" data-inline="true" class="search-button">Send</a>
+    </div>
+
+    <!--    <div>
       <input name="" id="searchinput1" placeholder="Context:" value="" type="search" data-inline="true"><a href="#home" data-role="button" data-inline="true" class="search-button">Send</a>
     </div>  -->
   </div><!-- /header -->
@@ -71,7 +75,7 @@
 -->
   <div data-role="content" class="scrollable">
     <div id="home-who">
-      <ul id="contactList" data-role="listview" data-inset="false" data-theme="a" data-filter="true" data-filter-placeholder="Context:" data-split-icon="gear" data-split-theme="d">
+      <ul id="contactList" data-role="listview" data-inset="false" data-theme="a" data-filter="true" data-filter-theme="a" data-filter-placeholder="Context:" data-split-icon="gear" data-split-theme="d">
         <li data-theme="b" data-role="list-divider">
           <div class="ui-grid-b" data-theme="c">
             <div class="ui-block-a" style="width:23%">Status</div>
@@ -195,7 +199,7 @@
     <div id="home-what" class="hidden">
 <!--
       <div class="meetz-message-row">
-        <input name="" id="meetz_message" placeholder="Context:" value="" type="search" data-inline="true><a href="#home" data-role="button" data-inline="true" class="search-button">Send</a>
+        <input name="" id="meetz_message" placeholder="Context:" value="" type="search" data-inline="true"><a href="#home" data-role="button" data-inline="true" class="search-button">Send</a>
       </div>
       -->
       <ul id="selectedList" data-role="listview" data-inset="false">
@@ -347,8 +351,10 @@
       e.preventDefault();
       var tab = $(this).data('tab');
       tab = $(this).data('tab');
+      $('#meetz-message-row').addClass('hidden');
       switch (tab) {
         case 'what':
+          $('#meetz-message-row').removeClass('hidden');
           console.log(app.selectedRows);
           $('#selectedList li').each(function(index, value) {
             if (index > 0) {
