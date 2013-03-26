@@ -50,10 +50,10 @@
   <div data-theme="d" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="top">
       <ul>
-        <li><a href="#" data-transition="fade" class="ui-btn-active ui-state-persist who">who</a></li>
-        <li><a href="#" data-transition="fade" class="what">what</a></li>
-        <li><a href="#" data-transition="fade" class="where">where</a></li>
-        <li><a href="#" data-transition="fade" class="when">when</a></li>
+        <li><a href="#" data-role="tab" data-transition="fade" class="topnav who ui-btn-active ui-state-persist">who</a></li>
+        <li><a href="#" data-role="tab" data-transition="fade" class="topnav what">what</a></li>
+        <li><a href="#" data-role="tab" data-transition="fade" class="topnav where">where</a></li>
+        <li><a href="#" data-role="tab" data-transition="fade" class="topnav when">when</a></li>
       </ul>
     </div>
 <!--    <div>
@@ -70,7 +70,7 @@
   </div>
 -->
   <div data-role="content" class="scrollable">
-    <div id="home-contacts">
+    <div id="home-who">
       <ul id="contactList" data-role="listview" data-inset="false" data-theme="a" data-filter="true" data-filter-placeholder="Context:" data-split-icon="gear" data-split-theme="d">
         <li data-theme="b" data-role="list-divider">
           <div class="ui-grid-b" data-theme="c">
@@ -192,11 +192,13 @@
       </ul>
     </div>
 
-    <div id="home-selected" class="hidden">
+    <div id="home-what" class="hidden">
+<!--
       <div class="meetz-message-row">
         <input name="" id="meetz_message" placeholder="Context:" value="" type="search" data-inline="true"><a href="#home" data-role="button" data-inline="true" class="search-button">Send</a>
       </div>
-      <ul id="selectedList" data-role="listview" data-inset="false" data-theme="a">
+      -->
+      <ul id="selectedList" data-role="listview" data-inset="false" data-theme="a" data-filter="true" data-filter-placeholder="Context:" data-split-icon="gear" data-split-theme="d">
         <li data-theme="b" data-role="list-divider">
           <div class="ui-grid-b" data-theme="c">
             <div class="ui-block-a" style="width:23%">Status</div>
@@ -205,7 +207,7 @@
           </div>
         </li>
         <li>
-          <label data-corners="false"> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="d" value="2"/>
+          <label data-corners="false"> <input type="checkbox" name="meetz-1 " class="checkbox-row" data-theme="a" value="2"/>
             <div class="ui-grid-b">
               <div class="ui-block-a" style="width:13%">AM</div>
               <div class="ui-block-b" style="width:49%">Anna Lisa Mulder</div>
@@ -214,6 +216,12 @@
           </label>
         </li>
       </ul>
+    </div>
+    <div id="home-where" class="hidden">
+      <p>Where</p>
+    </div>
+    <div id="home-when" class="hidden">
+      <p>When</p>
     </div>
   </div>
   <footer data-role="footer" data-position="fixed">
@@ -310,31 +318,55 @@
     //console.log(app.selectedIds);
   });
 
+ /*
+  $('li .topnav').on('click', function(e) {
+    var tab = '', t, th = this;
+    $.each(['who', 'what', 'where', 'when'], function(index, value) {
+      //alert(index + ': ' + value);
+      if ($(th).hasClass(value)) {
+        tab = value;
+      }
+    });
+
+    $('#home-' + tab).siblings().addClass('hidden').end().removeClass('hidden');
+    $('#home').trigger('create');
+    e.preventDefault();
+  });
+*/
+  /*
+  $('li .who').on('click', function() {
+    console.log(app.selectedIds);
+    $('#home-what').addClass('hidden');
+    $('#home-who').removeClass('hidden');
+    $('#home').trigger('create');
+  });
+
   $('li .what').on('click', function() {
-    //console.log(app.selectedIds);
-    $('#home-contacts').addClass('hidden');
+    console.log(app.selectedIds);
+    $('#home-who').addClass('hidden');
+    $('#home-what').removeClass('hidden');
+    $('#home').trigger('create');
+  });
+*/
+
+  /*
+  $('li .what').on('click', function() {
+    console.log(app.selectedIds);
+    $('#home-who').addClass('hidden');
     //$('#selectedList').children().remove('li')
     $('#selectedList li').each(function(index, value) {
       if (index > 0) {
         $(this).remove();
       }
     });
-    app.selectedIds.each(function(index, value) {
-      alert('index:' + index);
-      alert('value:' + value);
-    });
     //$('#selectedList').listview("refresh");
-    $('#home-selected').removeClass('hidden');
-    console.log($('#home-selected'));
-    $('#selectedList').trigger('create');
-  });
-
-  $('li .who').on('click', function() {
-    console.log(app.selectedIds);
-    $('#home-selected').addClass('hidden');
-    $('#home-contacts').removeClass('hidden');
+    //$('#selectedList').trigger('create').trigger('updatelayout');
+    $('#home-what').removeClass('hidden');
+    //console.log($('#home-what'));
+    //$('#selectedList').trigger('create');
     $('#home').trigger('create');
   });
+   */
 
   $('#contactList li').on('click', function () {
     //alert(this);
@@ -348,6 +380,30 @@
     //alert('theme:' + $(this).find('label').data('theme'));
     $(this).find('label').data('theme', 'b');
     console.log($(this).find('label'));
+  });
+
+  $("a[data-role=tab]").each(function () {
+    var anchor = $(this);
+    console.log(anchor);
+    anchor.on("click", function (e) {
+      var tab = '', t, th = this;
+      $.each(['who', 'what', 'where', 'when'], function(index, value) {
+        //alert(index + ': ' + value);
+        if ($(th).hasClass(value)) {
+          tab = value;
+        }
+      });
+      $('#home-' + tab).siblings().addClass('hidden').end().removeClass('hidden');
+      $('#home').trigger('create');
+      e.preventDefault();
+/*
+      $.mobile.changePage(anchor.attr("href"), {
+        transition: "none",
+        changeHash: false
+      });
+      return false;
+*/
+    });
   });
 </script>
 </body>
