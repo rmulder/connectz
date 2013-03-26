@@ -341,7 +341,7 @@
   });
 
   $("a[data-role=tab]").each(function () {
-    var anchor = $(this);
+    var anchor = $(this), tmp = '', row = 0;
     console.log(anchor);
     anchor.on("click", function (e) {
       e.preventDefault();
@@ -356,10 +356,15 @@
             }
           });
           $.each(app.selectedRows, function(key, value) {
-           console.log('key:');
-           //console.log(key);
-           //console.log(value);
-           });
+            console.log('key:');
+            //console.log(key);
+            console.log(value);
+            console.log(app.contacts[value]);
+            tmp += app.buildContactRow(app.contacts[value], value, row++, true);
+          });
+          $('#selectedList').append(tmp);
+          $('#selectedList').listview("refresh");
+          $('#selectedList').trigger('create');
           break;
       }
       $('#home-' + tab).siblings().addClass('hidden').end().removeClass('hidden');
