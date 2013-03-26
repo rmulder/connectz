@@ -558,8 +558,17 @@ input.checkbox-row {
 
 }
 
-div.meetz-message-row {
+.meetz-message-row {
   margin: 0;
   position: relative;
   top: -21px;
+  display: block;
+}
+
+.selected-list-header {
+  border: #4B3131;
+  background: #4B3131;
+  color: white;
+  font-weight: normal;
+  text-shadow: none;
 }

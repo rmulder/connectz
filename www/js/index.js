@@ -139,7 +139,9 @@ var app = {
       checked = checked || false;
       if (checked) {
         ck = ' checked';
+        rowclass = 'f';
       }
+
       first = (contactObject.name.givenName && contactObject.name.givenName !== 'null') ? contactObject.name.givenName : '';
       last = (contactObject.name.familyName && contactObject.name.familyName !== 'null') ? contactObject.name.familyName : '';
       fi = (first) ? first.substring(0,1) : '';
