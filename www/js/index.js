@@ -38,7 +38,7 @@ var app = {
     myLocationMarker: null,
     searchCircle: null,
     myLocation: null,
-    selectedIds: [],
+    selectedRows: [],
     contacts: {},
 
     // Application Constructor
@@ -111,6 +111,18 @@ var app = {
                   $('#contactList').trigger('create');
                   //$('#home').trigger('create');
                   $.mobile.hidePageLoadingMsg();
+                  $('input[type=checkbox]').on('click', function(i) {
+                    var th = $(this);
+                    //alert($(this).val());
+                    //alert($(this).prop('checked'));
+                    //alert($(this).is(':checked'));
+                    if ($(this).is(':checked')) {
+                      app.selectedRows.push(th.val() + '_' + th.data('phone'));
+                    } else {
+                      app.selectedRows = app.selectedRows.remove(th.val() + '_' + th.data('phone'));
+                    }
+                    console.log(app.selectedRows);
+                  });
                 },
                 function (contactError) {
                     alert('onError!');
@@ -130,7 +142,7 @@ var app = {
       li = (last) ? last.substring(0,1) : '';
 
       tmp += '<li>';
-      tmp += '  <label data-corners="false"> <input type="checkbox" class="checkbox-row" data-theme="' + rowclass + '" value="' + contactObject.id + '"/>';
+      tmp += '  <label data-corners="false"> <input type="checkbox" class="checkbox-row" data-phone="' + phone.value + '" data-theme="' + rowclass + '" value="' + contactObject.id + '"/>';
       tmp += '    <div class="ui-grid-b">';
       tmp += '      <div class="ui-block-a" style="width:13%"> ' + fi + li + '</div>';
       tmp += '      <div class="ui-block-b" style="width:49%">' + first + ' ' + last + '</div>';

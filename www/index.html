@@ -306,21 +306,10 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
   app.initialize();
-  $(':checkbox').on('click', function(i) {
-    alert($(this).val());
-    //alert($(this).prop('checked'));
-    //alert($(this).is(':checked'));
-    if ($(this).is(':checked')) {
-      app.selectedIds.push($(this).val());
-    } else {
-      app.selectedIds = app.selectedIds.remove($(this).val());
-    }
-    console.log(app.selectedIds);
-  });
 
   /*
   $('li .what').on('click', function() {
-    console.log(app.selectedIds);
+    console.log(app.selectedRows);
     $('#home-who').addClass('hidden');
     //$('#selectedList').children().remove('li')
     $('#selectedList li').each(function(index, value) {
@@ -338,7 +327,7 @@
    */
 
   $('#contactList li').on('click', function () {
-    //alert(this);
+    alert(this);
     //$(':checkbox:checked').each(function(i){
     //  alert($(this).val());
     //});
@@ -360,13 +349,13 @@
       tab = $(this).data('tab');
       switch (tab) {
         case 'what':
-          console.log(app.selectedIds);
+          console.log(app.selectedRows);
           $('#selectedList li').each(function(index, value) {
             if (index > 0) {
               $(this).remove();
             }
           });
-          $.each(app.selectedIds, function(key, value) {
+          $.each(app.selectedRows, function(key, value) {
            console.log('key:');
            //console.log(key);
            //console.log(value);
