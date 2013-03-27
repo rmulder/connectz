@@ -79,25 +79,7 @@ var app = {
                         //console.log(phone);
                         if (phone.type === 'mobile' || phone.type === 'other') {
                           app.contacts[phone.value] = contactObject;
-                          tmp += app.buildContactRow(contactObject, phone.value, row);
-/*
-                          rowclass = (row%2 === 0)? 'a' : 'e';
-                          first = (contactObject.name.givenName && contactObject.name.givenName !== 'null') ? contactObject.name.givenName : '';
-                          last = (contactObject.name.familyName && contactObject.name.familyName !== 'null') ? contactObject.name.familyName : '';
-                          fi = (first) ? first.substring(0,1) : '';
-                          li = (last) ? last.substring(0,1) : '';
-
-                          tmp += '<li>';
-                          tmp += '  <label data-corners="false"> <input type="checkbox" class="checkbox-row" data-theme="' + rowclass + '" value="' + contactObject.id + '"/>';
-                          tmp += '    <div class="ui-grid-b">';
-                          tmp += '      <div class="ui-block-a" style="width:13%"> ' + fi + li + '</div>';
-                          tmp += '      <div class="ui-block-b" style="width:49%">' + first + ' ' + last + '</div>';
-                          tmp += '      <div class="ui-block-c" style="width:38%"><a href="tel:' + phone.value + '">' + phone.value + '</a></div>';
-                          tmp += '    </div>';
-                          tmp += '  </label>';
-                          tmp += '</li>';
-*/
-                          row++;
+                          tmp += app.buildContactRow(contactObject, phone.value, row++);
                         }
                       }
                     }
