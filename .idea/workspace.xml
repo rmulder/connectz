@@ -5,6 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/connectz.xcodeproj/project.xcworkspace/xcuserdata/rammarketinginternational.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/my.js" afterPath="$PROJECT_DIR$/www/js/my.js" />
     </list>
     <ignored path="connectz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +27,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="254" column="0" selection-start="11251" selection-end="11251" vertical-scroll-proportion="0.7058824">
+            <state line="181" column="24" selection-start="8261" selection-end="8261" vertical-scroll-proportion="0.62566847">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -45,7 +46,7 @@
       <file leaf-file-name="index.03252013.save.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.03252013.save.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="73" selection-start="15238" selection-end="15238" vertical-scroll-proportion="7.4166665">
+            <state line="316" column="0" selection-start="15319" selection-end="15368" vertical-scroll-proportion="-11.958333">
               <folding />
             </state>
           </provider>
@@ -54,7 +55,7 @@
       <file leaf-file-name="my.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/my.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="259" column="113" selection-start="8569" selection-end="8569" vertical-scroll-proportion="0.0">
+            <state line="7" column="129" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,12 +73,12 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="0" selection-start="3080" selection-end="3080" vertical-scroll-proportion="0.0">
+            <state line="89" column="0" selection-start="3027" selection-end="3027" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1364336794000" expanded="true" signature="5310:5319" placeholder="..." />
-                <marker date="1364336794000" expanded="true" signature="5397:5406" placeholder="..." />
-                <marker date="1364336794000" expanded="true" signature="5494:5503" placeholder="..." />
+                <marker date="1364397673000" expanded="true" signature="6967:6976" placeholder="..." />
+                <marker date="1364397673000" expanded="true" signature="7054:7063" placeholder="..." />
+                <marker date="1364397673000" expanded="true" signature="7151:7160" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -111,6 +112,7 @@
         <option value="$PROJECT_DIR$/www/js/mobile-overrides.js" />
         <option value="$PROJECT_DIR$/www/css/connectz.css" />
         <option value="$PROJECT_DIR$/www/css/my.css" />
+        <option value="$PROJECT_DIR$/www/js/my.js" />
         <option value="$PROJECT_DIR$/www/js/index.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
       </list>
@@ -419,9 +421,9 @@
         <state line="80" column="108" selection-start="3535" selection-end="3535" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1364336794000" expanded="true" signature="5310:5319" placeholder="..." />
-            <marker date="1364336794000" expanded="true" signature="5397:5406" placeholder="..." />
-            <marker date="1364336794000" expanded="true" signature="5494:5503" placeholder="..." />
+            <marker date="1364397673000" expanded="true" signature="6967:6976" placeholder="..." />
+            <marker date="1364397673000" expanded="true" signature="7054:7063" placeholder="..." />
+            <marker date="1364397673000" expanded="true" signature="7151:7160" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -455,9 +457,9 @@
         <state line="80" column="108" selection-start="3535" selection-end="3535" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1364336794000" expanded="true" signature="5310:5319" placeholder="..." />
-            <marker date="1364336794000" expanded="true" signature="5397:5406" placeholder="..." />
-            <marker date="1364336794000" expanded="true" signature="5494:5503" placeholder="..." />
+            <marker date="1364397673000" expanded="true" signature="6967:6976" placeholder="..." />
+            <marker date="1364397673000" expanded="true" signature="7054:7063" placeholder="..." />
+            <marker date="1364397673000" expanded="true" signature="7151:7160" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -529,20 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="259" column="113" selection-start="8569" selection-end="8569" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.03252013.save.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="73" selection-start="15238" selection-end="15238" vertical-scroll-proportion="7.4166665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/connectz.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1293" column="58" selection-start="0" selection-end="57892" vertical-scroll-proportion="-2.8076923">
@@ -557,21 +545,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="129" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.03252013.save.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="316" column="0" selection-start="15319" selection-end="15368" vertical-scroll-proportion="-11.958333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="0" selection-start="3080" selection-end="3080" vertical-scroll-proportion="0.0">
+        <state line="89" column="0" selection-start="3027" selection-end="3027" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1364336794000" expanded="true" signature="5310:5319" placeholder="..." />
-            <marker date="1364336794000" expanded="true" signature="5397:5406" placeholder="..." />
-            <marker date="1364336794000" expanded="true" signature="5494:5503" placeholder="..." />
+            <marker date="1364397673000" expanded="true" signature="6967:6976" placeholder="..." />
+            <marker date="1364397673000" expanded="true" signature="7054:7063" placeholder="..." />
+            <marker date="1364397673000" expanded="true" signature="7151:7160" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="0" selection-start="11251" selection-end="11251" vertical-scroll-proportion="0.7058824">
+        <state line="181" column="24" selection-start="8261" selection-end="8261" vertical-scroll-proportion="0.62566847">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />

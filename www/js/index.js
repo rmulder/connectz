@@ -59,8 +59,46 @@ var app = {
     onDeviceReady: function() {
       $('#sample-row').hide();
       $.mobile.showPageLoadingMsg();
-        app.receivedEvent('deviceready');
-        //app.startGPS();
+      app.receivedEvent('deviceready');
+      //app.startGPS();
+      app.watchId = navigator.geolocation.watchPosition(app.onGeoSuccess, app.onGeoFailure, {frequency: 3000})
+    },
+    onGeoSuccess: function(position) {
+      var lat = position.coords.latitude, lon = position.coords.longitude,
+          t = 'Latitude: ' + lat + '<br />' +
+          'Longitude: ' + lon + '<br />' +
+          '<hr />' + $('#geolocation').html();
+      $('#geolocation').html(t);
+
+      console.log("*loadMap*: " + position.coords.latitude + ' ' + position.coords.longitude);
+      var latlng = new google.maps.LatLng(
+          position.coords.latitude, position.coords.longitude);
+      var myOptions = {
+        zoom: 12,           // zoom level. more value = more details
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var mapObj = document.getElementById("map_canvas");
+      var map = new google.maps.Map(mapObj, myOptions);
+
+      // marker will be displayed on the lat long position
+      var marker = new google.maps.Marker({
+        position: latlng,
+        map: map
+      });
+
+      /*
+      $('#map_canvas').gmap({options: {zoom: 1}, 'callback': function() {
+        alert('hey');
+        app.map = this;
+        app.map.clear('markers');
+        $('#map_canvas').gmap('option', 'center', new google.maps.LatLng(lat, lon));
+        $('#map_canvas').gmap('option', 'zoom', 16);
+        $('#map_canvas').gmap('option', 'zoomControlOptions', { 'style': google.maps.ZoomControlStyle.SMALL, 'position': google.maps.ControlPosition.TOP_LEFT });
+        app.map.addMarker({'position': new google.maps.LatLng(lat, lon), 'title': 'Current Location', 'icon': 'img/blue-pin.png'});
+      }});
+*/
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -142,7 +180,17 @@ var app = {
     },
 
     startGPS: function() {
-        console.log('begin: startGPS');
+      console.log('begin: startGPS');
+      navigator.geolocation.getCurrentPosition(function(position) {
+        //onSuccess
+        //alert('latitude:' + position.coords.latitude);
+        //alert('longitude:' + position.coords.longitude);
+      }, function(error) {
+        //onError
+        alert('code: ' + error.code + '\n' +
+            'message: ' + error.message + '\n');
+      });
+/*
         // simulate getting position from GPS
         app.myLocation = new google.maps.LatLng(39, -90);
         console.log(app.myLocation);
@@ -176,6 +224,7 @@ var app = {
                                               });
         // using bindTo instead does not fix the problem
         //  searchCircle.bindTo('center', myLocationMarker, 'position'); //This will set the circle bound to the marker at center
+*/
         console.log('end: startGPS');
     },
     
