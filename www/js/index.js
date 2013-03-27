@@ -131,6 +131,10 @@ var app = {
                   $('#contactList').trigger('create');
                   //$('#home').trigger('create');
                   $.mobile.hidePageLoadingMsg();
+
+                  $('.phone-link').on('click', function() {
+                    alert('we got clicked!');
+                  });
                   $('input[type=checkbox]').on('click', function(i) {
                     var th = $(this);
                     //alert($(this).val());
@@ -172,9 +176,11 @@ var app = {
       tmp += '    <div class="ui-grid-b">';
       tmp += '      <div class="ui-block-a" style="width:13%"> ' + fi + li + '</div>';
       tmp += '      <div class="ui-block-b" style="width:49%">' + first + ' ' + last + '</div>';
-      tmp += '      <div class="ui-block-c" style="width:38%"><a href="tel:' + phone + '">' + phone + '</a></div>';
+      tmp += '      <div class="ui-block-c phone-link" style="width:38%"><a href="tel:' + phone + '">' + phone + '</a></div>';
       tmp += '    </div>';
+//      tmp += '    <a href="tel:' + phone + '" data-theme="c">' + phone + '</a>';
       tmp += '  </label>';
+      tmp += '<a href="tel:' + phone + '" class="ui-li-link-alt ui-btn ui-btn-up-b" data-theme="b"><span class="ui-btn-inner"><span class="ui-btn-text"></span><span title="" data-theme="b" class="ui-btn ui-btn-up-b ui-btn-icon-notext ui-btn-corner-all ui-shadow"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"></span><span class="ui-icon ui-icon-grid ui-icon-shadow"></span></span></span></span></a>';
       tmp += '</li>';
       return tmp;
     },
