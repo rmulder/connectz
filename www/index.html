@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <title>meetz</title>
   <!-- jQuery Mobile CSS bits -->
-  <link href="css/jquery.mobile-1.3.0-rc.1.min.css" rel="stylesheet" />
+  <link href="css/jquery.mobile-1.3.0.min.css" rel="stylesheet" />
   <!-- if you have a custom jQuery Mobile theme, add it here -->
   <link rel="stylesheet" href="css/connectz.css" />
   <link href="css/jqm-icon-pack-2.0-original.css" rel="stylesheet" />
@@ -21,7 +21,7 @@
   <script src="js/jquery-1.9.0.min.js"></script>
   <script src="js/mobile-overrides.js"></script>
 
-  <script src="js/jquery.mobile-1.3.0-rc.1.min.js"></script>
+  <script src="js/jquery.mobile-1.3.0.min.js"></script>
   <script src="js/my.js"></script>
 
   <!-- User-generated js -->
@@ -40,10 +40,10 @@
   <div data-theme="d" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="top">
       <ul>
-        <li><a href="#" data-role="tab" data-tab="who" data-transition="fade" class="ui-btn-active ui-state-persist">who</a></li>
-        <li><a href="#" data-role="tab" data-tab="what" data-transition="fade">what</a></li>
-        <li><a href="#" data-role="tab" data-tab="where" data-transition="fade">where</a></li>
-        <li><a href="#" data-role="tab" data-tab="when" data-transition="fade">when</a></li>
+        <li><a href="#" data-role="tab" data-tab="who" data-transition="none" class="ui-btn-active ui-state-persist">who</a></li>
+        <li><a href="#" data-role="tab" data-tab="what" data-transition="none">what</a></li>
+        <li><a href="#" data-role="tab" data-tab="where" data-transition="none">where</a></li>
+        <li><a href="#" data-role="tab" data-tab="when" data-transition="none">when</a></li>
       </ul>
     </div>
     <div id="meetz-message-row" class="hidden">
@@ -123,9 +123,9 @@
     <div data-role="navbar">
       <div data-role="tabbar" data-iconpos="top" data-theme="d">
         <ul>
-          <li><a href="#home" data-transition="fade" data-theme="d"><img src="img/home.png" width="60" height="60"></a></li>
-          <li><a href="#meetz" data-transition="fade" data-theme="d"><img src="img/meetz.png" width="60" height="60"></a></li>
-          <li><a href="#mapz" data-transition="fade" data-theme="d"><img src="img/map.png" width="60" height="60"></a></li>
+          <li><a href="#home" data-transition="none" data-theme="d"><img src="img/home.png" width="60" height="60"></a></li>
+          <li><a href="#meetz" data-transition="none" data-theme="d"><img src="img/meetz.png" width="60" height="60"></a></li>
+          <li><a href="#mapz" data-transition="none" data-theme="d"><img src="img/map.png" width="60" height="60"></a></li>
         </ul>
       </div>
     </div><!-- /navbar -->
@@ -139,10 +139,10 @@
   <div data-theme="d" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="top">
       <ul>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="" class="ui-btn-active ui-state-persist">who</a></li>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="">what</a></li>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="">where</a></li>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="">when</a></li>
+        <li><a href="#" data-transition="none" data-theme="" data-icon="" class="ui-btn-active ui-state-persist">who</a></li>
+        <li><a href="#" data-transition="none" data-theme="" data-icon="">what</a></li>
+        <li><a href="#" data-transition="none" data-theme="" data-icon="">where</a></li>
+        <li><a href="#" data-transition="none" data-theme="" data-icon="">when</a></li>
       </ul>
     </div>
     <div>
@@ -156,9 +156,9 @@
     <div data-role="navbar">
       <div data-role="tabbar" data-iconpos="top" data-theme="d">
         <ul>
-          <li><a href="#home" data-transition="fade" data-theme="d"><img src="img/home.png" width="60" height="60"></a></li>
-          <li><a href="#meetz" data-transition="fade" data-theme="d"><img src="img/meetz.png" width="60" height="60"></a></li>
-          <li><a href="#mapz" data-transition="fade" data-theme="d"><img src="img/map.png" width="60" height="60"></a></li>
+          <li><a href="#home" data-transition="none" data-theme="d"><img src="img/home.png" width="60" height="60"></a></li>
+          <li><a href="#meetz" data-transition="none" data-theme="d"><img src="img/meetz.png" width="60" height="60"></a></li>
+          <li><a href="#mapz" data-transition="none" data-theme="d"><img src="img/map.png" width="60" height="60"></a></li>
         </ul>
       </div>
     </div><!-- /navbar -->
@@ -170,25 +170,43 @@
   <div data-theme="d" data-role="header" data-position="fixed">
     <div data-role="navbar" data-iconpos="top">
       <ul>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="" class="ui-btn-active ui-state-persist">who</a></li>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="">what</a></li>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="">where</a></li>
-        <li><a href="#" data-transition="fade" data-theme="" data-icon="">when</a></li>
+        <li><a href="#" data-transition="none" data-theme="" data-icon="" class="ui-btn-active ui-state-persist">who</a></li>
+        <li><a href="#" data-transition="none" data-theme="" data-icon="">what</a></li>
+        <li><a href="#" data-transition="none" data-theme="" data-icon="">where</a></li>
+        <li><a href="#" data-transition="none" data-theme="" data-icon="">when</a></li>
       </ul>
     </div>
   </div><!-- /header -->
 
   <div data-role="content">
-    <div id="map_canvas"></div>
+    <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+      <div id="map_canvas_1"></div>
+      <p class="mapControls">
+        <label for="from">From</label>
+        <input id="from" class="ui-bar-c" type="text" value="click 'Get Directions' to localize" class="lookLikeLabel" />
+
+      </p>
+      <p class="mapControls">
+        <label for="to">To</label>
+        <input id="to" class="ui-bar-c" type="text" value="" />
+      </p>
+      <a id="submit" href="#" data-role="button" data-icon="search">Get directions</a>
+    </div>
+    <div id="results" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" style="display:none;">
+
+      <div class="ui-li ui-li-divider ui-btn ui-bar-a ui-corner-top ui-btn-up-undefined">Results</div>
+      <div id="directions"></div>
+      <div class="ui-li ui-li-divider ui-btn ui-bar-a ui-corner-bottom ui-btn-up-undefined"></div>
+    </div>
     <div id="geolocation"></div>
   </div>
   <footer data-role="footer" data-position="fixed">
     <div data-role="navbar">
       <div data-role="tabbar" data-iconpos="top" data-theme="d">
         <ul>
-          <li><a href="#home" data-transition="fade" data-theme="d"><img src="img/home.png" width="60" height="60"></a></li>
-          <li><a href="#meetz" data-transition="fade" data-theme="d"><img src="img/meetz.png" width="60" height="60"></a></li>
-          <li><a href="#mapz" data-transition="fade" data-theme="d"><img src="img/map.png" width="60" height="60"></a></li>
+          <li><a href="#home" data-transition="none" data-theme="d"><img src="img/home.png" width="60" height="60"></a></li>
+          <li><a href="#meetz" data-transition="none" data-theme="d"><img src="img/meetz.png" width="60" height="60"></a></li>
+          <li><a href="#mapz" data-transition="none" data-theme="d"><img src="img/map.png" width="60" height="60"></a></li>
         </ul>
       </div>
     </div><!-- /navbar -->
@@ -196,11 +214,86 @@
 </section><!-- /mapz -->
 
 <script type="text/javascript" src="cordova-2.4.0.js"></script>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
-<script type="text/javascript" src="js/json2.js"></script>
+<!--<script type="text/javascript" src="js/json2.js"></script>  -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/jquery.ui.map.full.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.map.extensions.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
   app.initialize();
+
+  $(function() {
+/*
+    show_map.add(function() {
+      $('#map_canvas').gmap({ 'disableDefaultUI':true, 'callback': function() {
+        var self = this;
+        self.getCurrentPosition(function(position, status) {
+          if ( status === 'OK' ) {
+            self.set('clientPosition', new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+            self.addMarker({'position': self.get('clientPosition'), 'bounds': true});
+            self.addShape('Circle', { 'strokeWeight': 0, 'fillColor': "#008595", 'fillOpacity': 0.25, 'center': self.get('clientPosition'), 'radius': 15, clickable: false });
+          }
+        });
+      }});
+    }).load();
+*/
+
+    var home = new google.maps.LatLng(49.93547768118736, 11.2954580783844);
+
+
+    $('#mapz').on("pageshow", function() {
+      $('#map_canvas_1').gmap('refresh');
+
+    });
+
+
+    $('#mapz').on("pagecreate", function() {
+
+      $('#map_canvas_1').gmap({'center': home, 'zoom':17 });
+      $('#map_canvas_1').gmap('addMarker', { 'position': home, 'animation' : google.maps.Animation.DROP } );
+
+
+      $('#map_canvas_1').gmap('search', { 'location': home }, function (results) {
+
+        $('#to').val(results[0].formatted_address);
+
+      });
+
+      $('#submit').click(function() {
+        $('#map_canvas_1').gmap('getCurrentPosition', function(position, status) {
+          $.mobile.showPageLoadingMsg ();
+          if ( status === 'OK' ) {
+            var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+            $('#map_canvas_1').gmap('get', 'map').panTo(latlng);
+            $('#map_canvas_1').gmap('search', { 'location': latlng }, function(results, status) {
+              if ( status === 'OK' ) {
+                $('#from').val(results[0].formatted_address);
+                $('#map_canvas_1').gmap('displayDirections', { 'origin': $('#from').val(), 'destination': $('#to').val(), 'travelMode': google.maps.DirectionsTravelMode.DRIVING }, { 'panel': document.getElementById('directions')}, function(response, status) {
+                  $('#results').show();
+                  $.mobile.hidePageLoadingMsg();
+                });
+              }
+            });
+
+          } else {
+            $('#results').hide();
+            var cM = 'unable to localize - please try entering a location manually';
+
+            $("<div id='notification' class='ui-loader ui-overlay-shadow ui-body-e ui-corner-all'><h1>"+cM+"</h1></div>")
+                .css({ "display": "block", "opacity": 0.96, "top": $(window).scrollTop() + 200})
+                .appendTo( $.mobile.pageContainer )
+                .delay( 400 )
+                .fadeOut( 800, function(){
+                  $(this).remove();
+                });
+          }
+
+        }); // end submit
+      });
+
+    });
+
+  });
 /*
   $('#contactList li').on('click', function () {
     alert(this);
