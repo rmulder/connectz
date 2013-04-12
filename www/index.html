@@ -238,7 +238,7 @@
     }).load();
 */
 
-    var home = new google.maps.LatLng(49.93547768118736, 11.2954580783844);
+    var home = new google.maps.LatLng(37.3688889, -122.0352778);
 
 
     $('#mapz').on("pageshow", function() {
@@ -249,7 +249,7 @@
 
     $('#mapz').on("pagecreate", function() {
 
-      $('#map_canvas_1').gmap({'center': home, 'zoom':17 });
+      $('#map_canvas_1').gmap({'center': home, 'zoom':13 });
       $('#map_canvas_1').gmap('addMarker', { 'position': home, 'animation' : google.maps.Animation.DROP } );
 
 
