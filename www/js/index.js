@@ -45,11 +45,13 @@ window.show_map = {
 var app = {
     watchID: null,
     map: null,
+    current_loc: null,
     myLocationMarker: null,
     searchCircle: null,
     myLocation: null,
     selectedRows: [],
     contacts: {},
+    coords: {},
 
     // Application Constructor
     initialize: function() {
@@ -71,9 +73,16 @@ var app = {
       $.mobile.showPageLoadingMsg();
       app.receivedEvent('deviceready');
       //app.startGPS();
-      //app.watchId = navigator.geolocation.watchPosition(app.onGeoSuccess, app.onGeoFailure, {frequency: 3000})
+      app.watchId = navigator.geolocation.watchPosition(app.onGeoSuccess, app.onGeoFailure, {frequency: 3000})
     },
     onGeoSuccess: function(position) {
+      app.coords = {'lat': position.coords.latitude, 'lng': position.coords.longitude};
+      app.current_loc = new google.maps.LatLng(app.coords.lat, app.coords.lng);
+
+      $('#map_canvas').gmap({'center': app.current_loc, 'zoom':13 });
+      $('#map_canvas').gmap('addMarker', { 'position': app.current_loc, 'animation' : google.maps.Animation.DROP } );
+
+/*
       var lat = position.coords.latitude, lon = position.coords.longitude,
           t = 'Latitude: ' + lat + '<br />' +
           'Longitude: ' + lon + '<br />' +
@@ -97,7 +106,7 @@ var app = {
         position: latlng,
         map: map
       });
-
+*/
       /*
       $('#map_canvas').gmap({options: {zoom: 1}, 'callback': function() {
         alert('hey');
@@ -110,6 +119,11 @@ var app = {
       }});
 */
     },
+    onGeoError: function(error) {
+    //comment
+    alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+    },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var options = new ContactFindOptions();

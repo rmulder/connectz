@@ -574,11 +574,31 @@ input.checkbox-row {
 }
 
 /* Google Maps */
-#map_canvas_1								{ height: 300px;}
-.mapControls label							{ color: #656158; font-size:95%; vertical-align: middle; width: 20%; }
-.mapControls input							{ font-size: 90%; width: 70; }
-#directions									{ background: none repeat scroll 0 0 #EEEEEE; }
-#directions .adp-legal 						{ font-size: 80% !important; padding-bottom: 5px; padding-top: 5px; }
-#directions .adp-step, #directions .adp-substep { padding: 0.3em 5px;}
-#directions .adp-placemark					{ margin: 0; }
+#map_canvas {
+  height: 300px;
+}
+.mapControls label {
+  color: #656158;
+  font-size:95%;
+  vertical-align: middle;
+  width: 20%;
+}
+.mapControls input {
+  font-size: 90%;
+  width: 70;
+}
+#directions {
+  background: none repeat scroll 0 0 #EEEEEE;
+}
+#directions .adp-legal {
+  font-size: 80% !important;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+#directions .adp-step, #directions .adp-substep {
+  padding: 0.3em 5px;
+}
+#directions .adp-placemark {
+  margin: 0;
+}
 

@@ -180,7 +180,8 @@
 
   <div data-role="content">
     <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-      <div id="map_canvas_1"></div>
+      <div id="map_canvas"></div>
+<!--
       <p class="mapControls">
         <label for="from">From</label>
         <input id="from" class="ui-bar-c" type="text" value="click 'Get Directions' to localize" class="lookLikeLabel" />
@@ -191,13 +192,16 @@
         <input id="to" class="ui-bar-c" type="text" value="" />
       </p>
       <a id="submit" href="#" data-role="button" data-icon="search">Get directions</a>
+-->
     </div>
+<!--
     <div id="results" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" style="display:none;">
 
       <div class="ui-li ui-li-divider ui-btn ui-bar-a ui-corner-top ui-btn-up-undefined">Results</div>
       <div id="directions"></div>
       <div class="ui-li ui-li-divider ui-btn ui-bar-a ui-corner-bottom ui-btn-up-undefined"></div>
     </div>
+    -->
     <div id="geolocation"></div>
   </div>
   <footer data-role="footer" data-position="fixed">
@@ -223,6 +227,8 @@
   app.initialize();
 
   $(function() {
+    app.coords = JSON.parse(localStorage.getItem('coords')) || {'lat': 37.3688889, 'lng': -122.0352778};
+    app.current_loc = new google.maps.LatLng(app.coords.lat, app.coords.lng);
 /*
     show_map.add(function() {
       $('#map_canvas').gmap({ 'disableDefaultUI':true, 'callback': function() {
@@ -238,22 +244,18 @@
     }).load();
 */
 
-    var home = new google.maps.LatLng(37.3688889, -122.0352778);
-
-
     $('#mapz').on("pageshow", function() {
-      $('#map_canvas_1').gmap('refresh');
-
+      $('#map_canvas').gmap('refresh');
     });
-
 
     $('#mapz').on("pagecreate", function() {
 
-      $('#map_canvas_1').gmap({'center': home, 'zoom':13 });
-      $('#map_canvas_1').gmap('addMarker', { 'position': home, 'animation' : google.maps.Animation.DROP } );
+      $('#map_canvas').gmap({'center': app.current_loc, 'zoom':13 });
+      $('#map_canvas').gmap('addMarker', { 'position': app.current_loc, 'animation' : google.maps.Animation.DROP } );
 
 
-      $('#map_canvas_1').gmap('search', { 'location': home }, function (results) {
+/*
+      $('#map_canvas_1').gmap('search', { 'location': app.current_loc }, function (results) {
 
         $('#to').val(results[0].formatted_address);
 
@@ -290,7 +292,7 @@
 
         }); // end submit
       });
-
+*/
     });
 
   });
