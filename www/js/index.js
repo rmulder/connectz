@@ -80,7 +80,7 @@ var app = {
       app.current_loc = new google.maps.LatLng(app.coords.lat, app.coords.lng);
 
       $('#map_canvas').gmap({'center': app.current_loc, 'zoom':13 });
-      $('#map_canvas').gmap('addMarker', { 'position': app.current_loc, 'animation' : google.maps.Animation.DROP } );
+      $('#map_canvas').gmap('setCenter', { 'position': app.current_loc } );
 
 /*
       var lat = position.coords.latitude, lon = position.coords.longitude,
