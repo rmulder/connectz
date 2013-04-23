@@ -73,10 +73,12 @@ var app = {
       $.mobile.showPageLoadingMsg();
       app.receivedEvent('deviceready');
       //app.startGPS();
-      app.watchId = navigator.geolocation.watchPosition(app.onGeoSuccess, app.onGeoError, {frequency: 3000})
+      app.watchId = navigator.geolocation.watchPosition(app.onGeoSuccess, app.onGeoError, {enableHighAccuracy:true, maximumAge:30000, timeout:27000});
     },
     onGeoSuccess: function(position) {
       app.coords = {'lat': position.coords.latitude, 'lng': position.coords.longitude};
+      //alert('new coords: lat: ' + app.coords.lat + '; lng: ' + app.coords.lng);
+      navigator.geolocation.clearWatch(app.watchID);
       app.current_loc = new google.maps.LatLng(app.coords.lat, app.coords.lng);
 
       $('#map_canvas').gmap({'center': app.current_loc, 'zoom':13 });
