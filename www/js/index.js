@@ -73,7 +73,7 @@ var app = {
       $.mobile.showPageLoadingMsg();
       app.receivedEvent('deviceready');
       //app.startGPS();
-      app.watchId = navigator.geolocation.watchPosition(app.onGeoSuccess, app.onGeoFailure, {frequency: 3000})
+      app.watchId = navigator.geolocation.watchPosition(app.onGeoSuccess, app.onGeoError, {frequency: 3000})
     },
     onGeoSuccess: function(position) {
       app.coords = {'lat': position.coords.latitude, 'lng': position.coords.longitude};
